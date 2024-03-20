@@ -1,0 +1,12 @@
+{
+  "name": "Save FTP files to local disk",
+  "version": "1.0.0",
+  "tags": [
+    "Files",
+    "FTP",
+    "Storage"
+  ],
+  "additionalSystemsUsed": [
+    "System1"
+  ]
+}

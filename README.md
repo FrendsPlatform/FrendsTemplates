@@ -8,26 +8,33 @@ Whether you're integrating databases, APIs, or other systems, these templates ca
 
 # Structure
 
-NB! This is preliminary!
+The templates are arranged by category and inside category by source system.
 
-The templates are arranged by category. 
+This means that if the template is transferring data from SAP ERP then it belongs to ERP folder and SAP subfolder. 
 
 - README.md
 - Templates
-  - Category 1
-    - Template 1
-    - Template 2
-  - Category 2
-    - Template 3
-    - Template 4
-  - Category 3
-    - Template 5
-    - Template 6
+  - ERP
+    - SAP
+      - Template 1
+      - Template 2
+    - NetSuite
+      - Template 3
+  - CRM
+    - Salesforce
+      - Template 4
+      - Template 5
+  - Files 
+    - File System
+      - Template 6
+    - FTP
+      - Template 7
 
 Each template folder has the following files:
 
-- **long-description.md** - contains full template description along with intro, usage, configuration options and any other relevant information. This is used by the Template Portal.- **assets/*** - this folder can contain any images or assets used in the *long-description.md* file.
 - **short-description.md** - contains short and simple description of the template. This is used by Frends in process/template description.
+- **long-description.md** - contains full template description along with intro, usage, configuration options and any other relevant information. This is used by the Template Portal.
+- **assets/*** - this folder can contain any images or assets used in the *long-description.md* file.
 - **process.json** - the template itself
 - **metadata.json** - the template metadata, including its name, version and any integrated systems, that cannot be deducted by looking at the tasks used in the process.
 
