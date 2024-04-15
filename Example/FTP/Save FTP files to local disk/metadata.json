@@ -7,6 +7,6 @@
     "Storage"
   ],
   "additionalSystemsUsed": [
-    "System1"
+    "AmazonS3"
   ]
 }
