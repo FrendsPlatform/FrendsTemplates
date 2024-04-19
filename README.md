@@ -32,7 +32,6 @@ This means that if the template is transferring data from SAP ERP then it belong
 
 Each template folder has the following files:
 
-- **short-description.md** - contains short and simple description of the template. This is used by Frends in process/template description.
 - **long-description.md** - contains full template description along with intro, usage, configuration options and any other relevant information. This is used by the Template Portal.
 - **assets/*** - this folder can contain any images or assets used in the *long-description.md* file.
 - **process.json** - the template itself
