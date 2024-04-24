@@ -35,11 +35,3 @@ to the FTP server is retries three time before failing.
 This template does not handle issues with local file access separately, so
 in case file write error occur the process execution will fail with an appropriate
 error message.
-
-# Template Variables
-
-- FtpHost - the host of the FTP server
-- FtpUser - the username to use for FTP connection
-- FtpPassword - the password to use for FTP connection
-- FileMask - file mask to use when searching for files to download
-- LocalDirectoryPath - the path to directory where the downloaded files should be saved
