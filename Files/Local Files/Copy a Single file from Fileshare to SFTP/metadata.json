@@ -1,0 +1,16 @@
+{
+  "name": "Copy a Single file from Fileshare to SFTP",
+  "version": "1.0.0",
+  "tags": [
+    "Files",
+    "SFTP",
+    "Fileshare"
+  ],
+  "additionalSystemsUsed": [
+    "SFTP"
+  ],
+  "tasks": [
+     "Frends.Files.Read.Files.Read",
+     "Frends.SFTP.WriteFile.SFTP.WriteFile"
+  ],
+}
