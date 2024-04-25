@@ -1,6 +1,6 @@
 Template enables to convert Json file into Csv file. It reads Json file from source SFTP server and write a new CSV file in a target SFTP server.
 
-![Template](assets/simplified_template.svg)
+![Template](assets/JSON_to_CSV.svg)
 
 # Prerequisites
 
