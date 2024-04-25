@@ -1,0 +1,12 @@
+{
+  "name": "MS SQL database SELECT to CSV file",
+  "version": "0.1.1",
+  "tags": [
+    "MS SQL",
+    "SFTP",
+    "Json",
+    "CSV"
+  ],
+  "additionalSystemsUsed": [
+  ]
+}
