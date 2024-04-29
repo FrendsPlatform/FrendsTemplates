@@ -1,4 +1,4 @@
-This Process will read a file from a **local directory**, and move it without any processing to an **SFTP Server** location.
+This Process will read a file from a **local file system**, and move it without any processing to an **SFTP Server** location.
 
 ![Template](assets/Copy_a_Single_file_from_Fileshare_to_SFTP.svg)
 
@@ -13,15 +13,8 @@ This template assumes that the following prerequisites are in place:
 
 This template only reads a file from the local fileshare and uploads it to an SFTP server.
 It does not handle cleanup of the local directory, so cleaning or local file processing should be done separately.
+Teh process will overwrite the file if it is already in existence on the target SFTP server.  
 
-To use the process you must first populate the process variables .....
-	1.	**InFilePath** - the **Full path** of the input file to be read.
-	2.	**InFileName** - the **Name** of the input file to be read.
-	3.	**TargetFilePath** - the **Full path** of the target file to be read .
-	4.	**TargetFileName** - the **Name** of the target file to be read .
-	5.	**TargetServerAddress** - the **Address** of the target SFTP Server.
-	6.	**TargetServerUser** - the **User** for the target SFTP Server.
-	7.	**TargetServerPassword** - the **Password** the target SFTP Server. 
 
 # Error Handling
 
