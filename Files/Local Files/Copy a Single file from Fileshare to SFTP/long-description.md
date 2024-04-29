@@ -1,4 +1,4 @@
-This Process will read a file from a **local fileshare**, and move it without any processing to an **SFTP Server** location.
+This Process will read a file from a **local directory**, and move it without any processing to an **SFTP Server** location.
 
 ![Template](assets/Copy_a_Single_file_from_Fileshare_to_SFTP.svg)
 
