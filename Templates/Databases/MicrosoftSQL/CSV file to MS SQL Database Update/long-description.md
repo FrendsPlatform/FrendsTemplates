@@ -17,7 +17,8 @@ This template assumes that the following prerequisites are in place:
 This template only performs updates into the database specified in the Process Variables.
 The input CSV file will contained the data to be inserted in key-value format, it can contain any column names from the table that is to be updated.
 One of the key-values pairs must be "**Where**" which will be the SQL WHERE clause. If the value is blank or null then the update will be applied to all rows of the table.
-**Exampls CSV data**
+
+**Example CSV data**
 email;address1;address2;state;phone;lastname;title;Where
 dave21@frends.com;1440 River Drive;" #100";CA;123456789;Twenty-One;Mr;address2 = ' #104'
 dave51@frends.com;1990 River Drive;" #101";NH;123456789;Fifty-One;Mr;address2 = ' #107'
