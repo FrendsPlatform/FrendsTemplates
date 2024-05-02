@@ -2,6 +2,5 @@
   "name": "Copy multiple files from local fileshare to SFTP server",
   "version": "1.0.0",
   "tags": [],
-  "additionalSystemsUsed": [],
-  "tasks": [],
+  "additionalSystemsUsed": []
 }
