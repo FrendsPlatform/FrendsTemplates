@@ -1,0 +1,6 @@
+{
+  "name": "CSV file from SFTP server to MySQL Database Insert",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": []
+}
