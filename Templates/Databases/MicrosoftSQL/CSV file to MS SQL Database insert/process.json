@@ -8,11 +8,6 @@
 				"MS SQL Server",
 				"CSV"
 			],
-			"TemplateProcessTags": [
-				"MS SQL Server",
-				"SFTP",
-				"CSV"
-			],
 			"Description": "This Process will take the contents of a CSV file. CSV is converted to JSON before creating and executing INSERT statement to MS SQL database.",
 			"Version": 1,
 			"UniqueIdentifier": "7caec1c5-1235-4bd7-b0c2-657cda90d508",
