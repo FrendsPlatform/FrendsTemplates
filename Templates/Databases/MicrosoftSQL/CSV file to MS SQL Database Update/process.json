@@ -8,11 +8,6 @@
 				"MS SQL Server",
 				"CSV"
 			],
-			"TemplateProcessTags": [
-				"Json",
-				"MS SQL Server",
-				"SFTP"
-			],
 			"Description": "This process will retrieve a **CSV file** from the specified **SFTP** server.\nIt will take the contents of the file and use it to  create an **MS SQL Database** update statement. It will then execute the statement on the specified **MS SQL Database**.",
 			"Version": 1,
 			"UniqueIdentifier": "674a8311-7b52-4bd1-8347-6abe9c544b93",
