@@ -8,11 +8,6 @@
 				"Json",
 				"MS SQL Server"
 			],
-			"TemplateProcessTags": [
-				"Json",
-				"MS SQL Server",
-				"SFTP"
-			],
 			"Description": "This process will retrieve a **Json file** from the specified **SFTP** server.\nIt will take the contents of the file and use it to  create an **MS SQL Database** update statement. It will then execute the statement on the specified **MS SQL Database**.",
 			"Version": 1,
 			"UniqueIdentifier": "80e19425-ac8a-44f8-9ff8-76386ca9fce1",
