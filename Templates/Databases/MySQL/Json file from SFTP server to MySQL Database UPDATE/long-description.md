@@ -1,0 +1,50 @@
+This process will read a **Json file**, which contains key-value pairs representing the data to update the specified table in the MySQL database, from an **SFTP server**. 
+
+
+
+![Template](assets/Json file from SFTP server to MySQL Database UPDATE.svg)
+
+# Prerequisites
+
+This template assumes that the following prerequisites are in place:
+
+- The SFTP server user should have the permissions to connect and access 
+  the files that Frends needs to download.
+- The Frends agent has access to MySQL database where the data will be insert and the necessary permissions to perform the insert.
+
+# Implementation and Usage Notes
+
+This template only performs updates into the MySQL database specified in the Process Variables.
+The input Json file will contain the data to be inserted in key-value format, it can contain any column names from the table that is to be updated.
+One of the key-values pairs must be "**Where**" which will be the SQL WHERE clause. If the value is blank or null then the update will be applied to all rows of the table.
+**Exampls Json data**
+[
+	{
+		"email": "dave121@example.com",
+		"zipcode": "123451",
+		"firstname": "Fred",
+		"title": "Mr",
+		"Where": "address2 = ' #190'"
+	},
+	{
+		"phone": "91234567891",
+		"firstname": "Dave",
+		"lastname": "Twenty-One",
+		"title": "Mr",
+		"Where": "address2 = ' #190'"
+
+	},
+	{
+		"address2": " #1909",
+		"country": "CAN",
+		"state": "CL",
+		"Where": "phone = '123456789'"
+		....
+		....
+]
+# Error Handling
+
+This template does not handle transient errors separately, however the connection
+to the SFTP server and Database are retried three time before failing.
+
+The template does not handle any SQL errors that may occur, these should be referred to **SUPPORT**
