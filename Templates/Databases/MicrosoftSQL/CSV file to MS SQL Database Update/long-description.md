@@ -1,4 +1,4 @@
-This process will read a **CSV file** which contains key-value pairs representing the data to be insert into the database from an **SFTP server**. 
+This process will read a **CSV file** which contains key-value pairs representing the data to be updated in the MicrosoftSQL database from an **SFTP server**. 
 
 
 
@@ -14,21 +14,21 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template only performs updates into the database specified in the Process Variables.
-The input CSV file will contained the data to be inserted in key-value format, it can contain any column names from the table that is to be updated.
-One of the key-values pairs must be "**Where**" which will be the SQL WHERE clause. If the value is blank or null then the update will be applied to all rows of the table.
+This template only performs updates to a table in a MicrosoftSQL database specified in the Process Variables.
+The input CSV file will contained the data to be inserted in key-value format, it must contain column names that match the column names in the table that is to be updated.
+The Process Variable rowIdentifier must be set to the name of the table column that will uniquely indentify the row to be updated.
 
 **Example CSV data**
 
-email;address1;address2;state;phone;lastname;title;Where
+email;address1;address2;state;phone;lastname;title
 
-dave21@frends.com;1440 River Drive;" #100";CA;123456789;Twenty-One;Mr;address2 = ' #104'
+dave21@frends.com;1440 River Drive;" #100";CA;123456789;Twenty-One;Mr
 
-dave51@frends.com;1990 River Drive;" #101";NH;123456789;Fifty-One;Mr;address2 = ' #107'
+dave51@frends.com;1990 River Drive;" #101";NH;123456789;Fifty-One;Mr
 
-dave52@frends.com;1991 River Drive;" #101";NY;123456789;Fifty-Two;Master;phone = '563888888'
+dave52@frends.com;1991 River Drive;" #101";NY;123456789;Fifty-Two;Master
 
-dave53@frends.com;1992 River Drive;" #101";NY;123456789;Fifty-Three;Master;phone = '444444444'
+dave53@frends.com;1992 River Drive;" #101";NY;123456789;Fifty-Three;Master
 
 
 
