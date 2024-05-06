@@ -1,6 +1,6 @@
 This Process will read a list file from a **local fileshare** based on a **file mask**, and move each file without any processing to an **SFTP Server** location.
 
-![Template](assets/Copy multiple files from local fileshare to SFTP server.svg)
+![Template](assets/Copy_multiple_files_from_local_fileshare_to_SFTP_server.svg)
 
 # Prerequisites
 
