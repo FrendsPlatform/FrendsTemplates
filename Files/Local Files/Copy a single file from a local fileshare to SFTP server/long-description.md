@@ -1,6 +1,6 @@
 This Process will read a file from a **local file system**, and move it without any processing to an **SFTP Server** location.
 
-![Template](assets/Copy_a_Single_file_from_Fileshare_to_SFTP.svg)
+![Template](assets/Copy_a_single_file_from_a_local_fileshare_to_SFTP_server.svg)
 
 # Prerequisites
 
