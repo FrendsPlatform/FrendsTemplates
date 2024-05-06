@@ -1,6 +1,6 @@
 This process will connect to an SFTP server and read a JSON file, which contains key-value pairs representing the data to INSERT into the specified table in the database.
 
-![Template](assets/JSON file from SFTP to MySQL Database INSERT.svg)
+![Template](assets/JSON_file_from_SFTP_to_MySQL_Database_INSERT.svg)
 
 # Prerequisites
 
