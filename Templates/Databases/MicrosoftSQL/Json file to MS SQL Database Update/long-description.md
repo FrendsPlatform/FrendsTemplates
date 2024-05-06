@@ -2,7 +2,7 @@ This process will read a **Json file**, which contains key-value pairs represent
 
 
 
-![Template](assets/Json file to MS SQL Database Update.svg)
+![Template](assets/Json file to MicrosoftSQL Database Update.svg)
 
 # Prerequisites
 
