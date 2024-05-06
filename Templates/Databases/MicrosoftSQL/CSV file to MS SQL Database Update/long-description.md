@@ -2,7 +2,7 @@ This process will read a **CSV file** which contains key-value pairs representin
 
 
 
-![Template](assets/CSV file from SFTP server to MicrosoftSQL Database Update.svg)
+![Template](assets/CSV_file_from_SFTP_server_to_MicrosoftSQL_Database_Update.svg)
 
 # Prerequisites
 
