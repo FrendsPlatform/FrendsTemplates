@@ -2,7 +2,7 @@ This process will read a **Json file**, which contains key-value pairs represent
 
 
 
-![Template](assets/Json file from SFTP server to MySQL Database UPDATE.svg)
+![Template](assets/Json_file_from_SFTP_server_to_MySQL_Database_UPDATE.svg)
 
 # Prerequisites
 
