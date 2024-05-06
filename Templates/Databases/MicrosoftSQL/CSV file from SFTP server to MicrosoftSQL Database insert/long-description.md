@@ -2,7 +2,7 @@ This process will read a **CSV file** which contains key-value pairs representin
 
 
 
-![Template](assets/CSV file to MS SQL Database insert.svg)
+![Template](assets/CSV_file_to_MS_SQL_Database_insert.svg)
 
 # Prerequisites
 
