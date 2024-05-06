@@ -18,6 +18,7 @@ This template only performs updates into the MySQL database specified in the Pro
 The input Json file will contain the data to be inserted in key-value format, it can contain any column names from the table that is to be updated.
 One of the key-values pairs must be "**Where**" which will be the SQL WHERE clause. If the value is blank or null then the update will be applied to all rows of the table.
 **Exampls Json data**
+
 [
 	{
 		"email": "dave121@example.com",
@@ -32,7 +33,6 @@ One of the key-values pairs must be "**Where**" which will be the SQL WHERE clau
 		"lastname": "Twenty-One",
 		"title": "Mr",
 		"Where": "address2 = ' #190'"
-
 	},
 	{
 		"address2": " #1909",
