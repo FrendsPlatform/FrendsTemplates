@@ -13,14 +13,13 @@ This template assumes that the following prerequisites are in place:
 
 This template only reads a file from the local fileshare and uploads it to an SFTP server.
 It does not handle cleanup of the local directory, so cleaning or local file processing should be done separately.
-Teh process will overwrite the file if it is already in existence on the target SFTP server.  
-
+The process will overwrite the file if it is already exists on the target SFTP server.  
 
 # Error Handling
 
-This template does not handle transient errors separately, however when connecting
-to the **SFTP server** it retries **three** times before failing.
+This template does not handle transient errors separately, however when 
+connecting to the **SFTP server** it retries **three** times before failing.
 
 This template does not handle issues with local file access separately, so
-in case file read error occurs the process execution will fail with an appropriate
-error message.
+in case file read error occurs the process execution will fail with an 
+appropriate error message.
