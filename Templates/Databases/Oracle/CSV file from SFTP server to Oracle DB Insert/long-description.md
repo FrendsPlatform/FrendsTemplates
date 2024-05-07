@@ -29,6 +29,6 @@ dave53@frends.com;1992 River Drive;" #101";NY;123456789;Fifty-Three;Master;phone
 
 # Error Handling
 
-This template does not handle transient errors separately, however the connection to the SFTP server and MySQL database are retried three time before failing.
+This template does not handle transient errors separately, however the connection to the SFTP server and Oracle database are retried three time before failing.
 
 The template does not handle any SQL errors that may occur - the errors will be thrown as exceptions.
