@@ -1,4 +1,5 @@
-This process will connect to an SFTP server and read a JSON file, which contains  the data to INSERT into the specified table in the Oracle database.
+This template generates CSV data from Microsoft SQL Server. 
+Using this template, you can create a CSV file by fetching data from Oracle database Server, and then transform it into CSV file which will be saved on SFTP server.
 
 ![Template](assets/Oracle_database_SELECT_to_CSV_file_with_SFTP_upload.svg)
 
@@ -6,55 +7,26 @@ This process will connect to an SFTP server and read a JSON file, which contains
 
 This template assumes that the following prerequisites are in place:
 
-- The SFTP server user should have the permissions to connect and access 
-  the files that Frends needs to download.
-- The Frends agent has access to the Oracle database where the data will be inserted and the necessary permissions to perform the insert.
-- The JSON column names are the same as the column names in the Oracle database table.
+- The Oracle database user has permissions to read data from the tables specified in the query.
+- The SFTP server user should have the permissions to connect and write the files that Frends needs to upload.
+
 
 # Implementation and Usage Notes
 
-This template only performs INSERTs into the Oracle database table specified in the Process Variables.
+This template creates a new CSV file based on the data from the SQL query. 
+The variable SelectionCriteria provides the possibility to add conditions to the SELECT statement.
+In case of already existing file in SFTP server path, old file will be overwritten.
 
-The input Json file will contain the data to be updated in key-value format and must not contain nested elements.
-It can contain any column names from the table that is to be updated.
-
-**Example JSON data**
+**Example CSV data**
 
 ```
-[
-	{
-		"email": "dave121@frends.com",
-		"address1": "91441 River Drive",
-		"address2": " #1901",
-		"country": "USA",
-		"state": "CA",
-		"city": "Rivertown",
-		"zipcode": "123451",
-		"phone": "1234567891",
-		"firstname": "Dave",
-		"lastname": "Twenty-One",
-		"title": "Mr"
-	},
-	{
-		"email": "dave221@frends.com",
-		"address1": "91442 River Drive",
-		"address2": " #1900",
-		"country": "USA",
-		"state": "CA",
-		"city": "Rivertown",
-		"zipcode": "123452",
-		"phone": "1234567892",
-		"firstname": "Dave",
-		"lastname": "Twenty-two",
-		"title": "Mr"
-	},
-	{
-		"email": "dave123@frends.com",
-		"address1": "91443 River Drive",
-		"address2": " #1903",
-	...
-	...
-	...
+email;address1;address2;country;state;city;zipcode;phone;firstname;lastname;title
+dave1021@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
 ```
 
 # Error Handling
