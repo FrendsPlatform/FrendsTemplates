@@ -15,10 +15,12 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template only performs updates into the MySQL database specified in the Process Variables.
-The input Json file will contain the data to be updated in key-value format, it can contain any column names from the table that is to be updated.
+The input Json file will contain the data to be updated in key-value format and must not contain nested elements.
+It can contain any column names from the table that is to be updated.
 
 
 **Example Json data**
+```
 [
 	{
 		"email": "dave121@example.com",
@@ -39,6 +41,8 @@ The input Json file will contain the data to be updated in key-value format, it 
 		....
 		....
 ]
+```
+
 # Error Handling
 
 This template does not handle transient errors separately, however the connection
