@@ -15,9 +15,10 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template only performs updates into the database table specified in the Process Variables.
-The input Json file will contain the data to be updated in key-value format, it can contain any column names from the table that is to be updated.
+This process will read a **Json file**, which contains key-value pairs representing the data to update the specified table in the MySQL database, from an **SFTP server**. 
 
 **Example Json data**
+```
 [
 	{
 		"RateKey": "EURUSD",
@@ -48,6 +49,8 @@ The input Json file will contain the data to be updated in key-value format, it 
 		"Where": "RateKey = 'EURJPY'"
 	}
 ]
+```
+
 # Error Handling
 
 This template does not handle transient errors separately, however the connection
