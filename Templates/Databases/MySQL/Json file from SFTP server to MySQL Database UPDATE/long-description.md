@@ -15,8 +15,8 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template only performs updates into the MySQL database specified in the Process Variables.
-The input Json file will contain the data to be inserted in key-value format, it can contain any column names from the table that is to be updated.
-One of the key-values pairs must be "**Where**" which will be the SQL WHERE clause. If the value is blank or null then the update will be applied to all rows of the table.
+The input Json file will contain the data to be updated in key-value format, it can contain any column names from the table that is to be updated.
+
 
 **Example Json data**
 [
