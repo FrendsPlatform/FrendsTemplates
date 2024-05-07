@@ -4,7 +4,11 @@
 			"Name": "CSV file from SFTP server to Oracle DB Insert",
 			"Modified": "2024-05-07T10:48:25.0943302",
 			"Modifier": "david.roberts@frends.com",
-			"Tags": [],
+			"Tags": [
+				"SFTP",
+				"CSV",
+				"Oracle"
+			],
 			"TemplateProcessTags": [],
 			"Description": "This process will retrieve a **CSV file** from the specified **SFTP** server.\nIt will take the contents of the file and use it to  create an **Oracle Database** INSERT statement. It will then execute the statement on the specified **Oracle Database**.",
 			"Version": 1,
