@@ -24,21 +24,18 @@ The input Json file will contain the data to be updated in key-value format, it 
 		"email": "dave121@example.com",
 		"zipcode": "123451",
 		"firstname": "Fred",
-		"title": "Mr",
-		"Where": "address2 = ' #190'"
+		"title": "Mr"
 	},
 	{
 		"phone": "91234567891",
 		"firstname": "Dave",
 		"lastname": "Twenty-One",
-		"title": "Mr",
-		"Where": "address2 = ' #190'"
+		"title": "Mr"
 	},
 	{
 		"address2": " #1909",
 		"country": "CAN",
-		"state": "CL",
-		"Where": "phone = '123456789'"
+		"state": "CL"
 		....
 		....
 ]
