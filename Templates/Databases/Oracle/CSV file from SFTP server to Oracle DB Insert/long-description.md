@@ -1,6 +1,6 @@
 This process will connect to an SFTP server and read a CSV file, which contains  the data to INSERT into the specified table in the Oracle database.
 
-![Template](assets/CSV_file_from_SFTP_server_to_Oracle_DB_Update.svg)
+![Template](assets/CSV_file_from_SFTP_server_to_Oracle_DB_Insert.svg)
 
 # Prerequisites
 
@@ -20,11 +20,15 @@ The input CSV file must contain the data to be inserted can contain any column n
 **Example CSV data**
 
 ```
-email;address1;address2;state;phone;lastname;title;Where
-dave21@frends.com;1440 River Drive;" #100";CA;123456789;Twenty-One;Mr;address2 = ' #104'
-dave51@frends.com;1990 River Drive;" #101";NH;123456789;Fifty-One;Mr;address2 = ' #107'
-dave52@frends.com;1991 River Drive;" #101";NY;123456789;Fifty-Two;Master;phone = '563888888'
-dave53@frends.com;1992 River Drive;" #101";NY;123456789;Fifty-Three;Master;phone = '444444444'
+email;address1;address2;country;state;city;zipcode;phone;firstname;lastname;title
+dave1021@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
 ```
 
 # Error Handling
