@@ -1,6 +1,6 @@
 This process will connect to an SFTP server and read a JSON file, which contains  the data to INSERT into the specified table in the Oracle database.
 
-![Template](assets/CSV_file_from_SFTP_server_to_Oracle_DB_Update.svg)
+![Template](assets/Json_file_from_SFTP_server_to_Oracle_DB_Insert.svg)
 
 # Prerequisites
 
