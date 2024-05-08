@@ -1,4 +1,4 @@
-This process will connect to an SFTP server and read a CSV file, which contains the data to UPDATE in the specified table in the Oracle database.
+This process will connect to an **SFTP server** and read a **CSV** file, which contains the data to UPDATE in the specified table in the **Oracle database**.
 
 ![Template](assets/CSV_file_from_SFTP_server_to_Oracle_DB_Update.svg)
 
@@ -6,16 +6,16 @@ This process will connect to an SFTP server and read a CSV file, which contains 
 
 This template assumes that the following prerequisites are in place:
 
-- The SFTP server user should have the permissions to connect and access 
-  the files that Frends needs to download.
-- The Frends agent has access to the Oracle database where the data will be updated and the necessary permissions to perform the update.
-- The CSV column names are the same as the column names in the Oracle database table.
+- The **SFTP server** user should have the permissions to connect and access 
+  the files that **Frends** needs to download.
+- The **Frends** agent has access to the **Oracle database** where the data will be updated and the necessary permissions to perform the update.
+- The **CSV** column names are the same as the column names in the **Oracle database** table.
 
 # Implementation and Usage Notes
 
-This template only performs UPDATEs into the Oracle database table specified in the Process Variables.
+This template only performs UPDATEs into the **Oracle database** table specified in the Process Variables.
 
-The input CSV file must contain the data to be updated and can contain any column names from the Oracle database table.
+The input **CSV** file must contain the data to be updated and can contain any column names from the **Oracle database** table.
 
 **Example CSV data**
 
@@ -29,6 +29,6 @@ dave53@frends.com;NY;123456789
 
 # Error Handling
 
-This template does not handle transient errors separately, however the connection to the SFTP server and Oracle database are retried three time before failing.
+This template does not handle transient errors separately, however the connection to the **SFTP server** and **Oracle database** are retried three time before failing.
 
 The template does not handle any SQL errors that may occur - the errors will be thrown as exceptions.
