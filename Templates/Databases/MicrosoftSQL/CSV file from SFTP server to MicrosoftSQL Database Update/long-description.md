@@ -9,8 +9,8 @@ This process will read a **CSV file** which contains key-value pairs representin
 This template assumes that the following prerequisites are in place:
 
 - The **SFTP server** user should have the permissions to connect and access 
-  the files that Frends needs to download.
-- The Frends agent has access to the **MicrosoftSQL database** where the data will be insert and the necessary permissions to perform the insert.
+  the files that **Frends** needs to download.
+- The **Frends** agent has access to the **MicrosoftSQL database** where the data will be insert and the necessary permissions to perform the insert.
 
 # Implementation and Usage Notes
 
