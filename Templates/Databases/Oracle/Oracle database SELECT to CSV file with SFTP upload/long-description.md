@@ -1,4 +1,4 @@
-This template generates CSV data from Microsoft SQL Server. 
+This template generates CSV data from Oracle database Server. 
 Using this template, you can create a CSV file by fetching data from Oracle database Server, and then transform it into CSV file which will be saved on SFTP server.
 
 ![Template](assets/Oracle_database_SELECT_to_CSV_file_with_SFTP_upload.svg)
