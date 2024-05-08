@@ -1,5 +1,5 @@
 {
-  "name": "CSV file from and SFTP Server to Microsoft SQL Database insert",
+  "name": "CSV file from SFTP Server to Microsoft SQL Database insert",
   "version": "1.0.0",
   "tags": [],
   "additionalSystemsUsed": []
