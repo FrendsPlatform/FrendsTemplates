@@ -1,0 +1,6 @@
+{
+  "name": "CSV file from SFTP server to MicrosoftSQL database update",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": []
+}
