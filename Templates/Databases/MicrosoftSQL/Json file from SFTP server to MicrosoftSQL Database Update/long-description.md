@@ -1,4 +1,4 @@
-This process will read a **Json file**, which contains key-value pairs representing the data to update the specified table in the **MicrosoftSQL database**, from an **SFTP server**. 
+This process will read a **Json** file, which contains key-value pairs representing the data to update the specified table in the **MicrosoftSQL database**, from an **SFTP server**. 
 
 
 
@@ -9,13 +9,13 @@ This process will read a **Json file**, which contains key-value pairs represent
 This template assumes that the following prerequisites are in place:
 
 - The **SFTP server** user should have the permissions to connect and access 
-  the files that Frends needs to download.
-- The Frends agent has access to **MicrosoftSQL database** where the data will be updated and the necessary permissions to perform the insert.
+  the files that **Frends** needs to download.
+- The **Frends** agent has access to **MicrosoftSQL database** where the data will be updated and the necessary permissions to perform the insert.
 
 # Implementation and Usage Notes
 
 This template only performs updates into the **MicrosoftSQL database** table specified in the Process Variables.
-This process will read a **Json file**, which contains key-value pairs representing the data to update the specified table in the **MicrosoftSQL database**, from an **SFTP server**. 
+This process will read a **Json** file, which contains key-value pairs representing the data to update the specified table in the **MicrosoftSQL database**, from an **SFTP server**. 
 
 **Example Json data**
 ```
@@ -56,4 +56,4 @@ This process will read a **Json file**, which contains key-value pairs represent
 This template does not handle transient errors separately, however the connection
 to the **SFTP server** and **MicrosoftSQL database** are retried three time before failing.
 
-The template does not handle any SQL errors that may occur - these will be handled as exceptions.
+The template does not handle any SQL errors that may occur - these will be thrown as exceptions.
