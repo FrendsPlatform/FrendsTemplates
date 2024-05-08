@@ -48,4 +48,4 @@ It can contain any column names from the table that is to be updated.
 This template does not handle transient errors separately, however the connection
 to the SFTP server and Database are retried three time before failing.
 
-The template does not handle any SQL errors that may occur.
+The template does not handle any SQL errors that may occur - these will be handled as exceptions.
