@@ -1,4 +1,4 @@
-This process will read a **Json file**, which contains key-value pairs representing the data to update the specified table in the **MySQL database**, from an **SFTP server**. 
+This process will read a **Json** file, which contains key-value pairs representing the data to update the specified table in the **MySQL database**, from an **SFTP server**. 
 
 
 
@@ -8,14 +8,14 @@ This process will read a **Json file**, which contains key-value pairs represent
 
 This template assumes that the following prerequisites are in place:
 
-- The SFTP server user should have the permissions to connect and access 
+- The **SFTP server** user should have the permissions to connect and access 
   the files that **Frends** needs to download.
 - The **Frends** agent has access to **MySQL database** where the data will be insert and the necessary permissions to perform the insert.
 
 # Implementation and Usage Notes
 
 This template only performs updates into the **MySQL database** specified in the Process Variables.
-The input Json file will contain the data to be updated in key-value format and must not contain nested elements.
+The input **Json** file will contain the data to be updated in key-value format and must not contain nested elements.
 It can contain any column names from the table that is to be updated.
 
 
@@ -46,6 +46,6 @@ It can contain any column names from the table that is to be updated.
 # Error Handling
 
 This template does not handle transient errors separately, however the connection
-to the SFTP server and Database are retried three time before failing.
+to the **SFTP server** and **MySQL database** are retried three time before failing.
 
 The template does not handle any SQL errors that may occur - these will be handled as exceptions.
