@@ -1,4 +1,4 @@
-This process will create a MySQL database SELECT statement, execute the statement on the specified database and then write the results to an **SFTP server** in a **Json** file.
+This process will create a **MySQL database** SELECT statement, execute the statement on the specified database and then write the results to an **SFTP server** in a **Json** file.
 
 ![Template](assets/MySQL_Database_SELECT_to_JSON_file.svg)
 
