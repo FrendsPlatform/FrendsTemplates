@@ -1,4 +1,4 @@
-Template enables to convert Json file into Csv file. It reads Json file from source SFTP server and write a new CSV file in a target SFTP server.
+This Process downloads JSON file from an SFTP server, converts it to CSV format and then writes the result back to the SFTP server.
 
 ![Template](assets/JSON_to_CSV.svg)
 
@@ -6,13 +6,12 @@ Template enables to convert Json file into Csv file. It reads Json file from sou
 
 This template assumes that the following prerequisites are in place:
 
-- The Source SFTP server user should have read access to files
-- The Target SFTP server user should have write access to files
+- The SFTP server user should have read and write access to files
 
 # Implementation and Usage Notes
 
-This template create new Csv file based on data provided by Json file. It doesn't make any changes to Json file. In case of already existing file in Target path, old file will be overwritten. If Json contain array of objects, their structure needs to be consistent.
+This Process creates new a CSV file based on data in the input JSON file. The data is written as is, without any transformations. In case when target CSV file already exists of the SFTP server it will be overwritten.
 
 # Error Handling
 
-Connection to both SFTP servers is retried three times before failing. Any other error related to conversion process is not handled by custom exception.
+Connection to the SFTP server is retried three times before failing. Any other transient errors related to conversion process are not handled and will produce an exception.
