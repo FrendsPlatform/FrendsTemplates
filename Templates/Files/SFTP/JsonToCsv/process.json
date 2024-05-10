@@ -1,0 +1,79 @@
+﻿{
+	"ProcessTemplates": [
+		{
+			"Name": "JSON file to CSV file",
+			"Modified": "2024-05-10T10:59:51.5613853",
+			"Modifier": "jefim.borissov@frends.com",
+			"Tags": [
+				"Json",
+				"SFTP",
+				"CSV"
+			],
+			"TemplateProcessTags": [],
+			"Description": "This Process will read the contents of a JSON file from an SFTP server. It will convert the JSON into CSV format and then write the converted data back to the SFTP server.",
+			"Version": 1,
+			"UniqueIdentifier": "97f724a8-44a0-41fe-90a8-db6e1947150d",
+			"ProcessVariablesJson": "{\"InFilePath\":{\"Value\":\"\\\"/data.json\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"\"},\"OutFilePath\":{\"Value\":\"\\\"/data.csv\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"Output CSV file path on the SFTP server.\"},\"ServerAddress\":{\"Value\":\"\\\"127.0.0.1\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"\"},\"ServerUser\":{\"Value\":\"\\\"user\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"\"},\"ServerPassword\":{\"Value\":\"\\\"password\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"\"}}",
+			"ProcessInfo": {
+				"Process": {
+					"Name": "JSON file to CSV file",
+					"Modified": "2024-05-10T10:59:51.5613853",
+					"Modifier": "jefim.borissov@frends.com",
+					"TagString": null,
+					"Tags": [],
+					"Description": "This Process will read the contents of a JSON file from an SFTP server. It will convert the JSON into CSV format and then write the converted data back to the SFTP server.",
+					"Version": 1,
+					"UniqueIdentifier": "ffbe58cf-a768-4223-96ab-30dd9f864951",
+					"GraphJson": null,
+					"Bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn2:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" id=\"sample-diagram\" targetNamespace=\"http://bpmn.io/schema/bpmn\" xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd\"><bpmn2:process id=\"Process_1\" isExecutable=\"false\"><bpmn2:startEvent id=\"StartEvent_1\" name=\"Manual Trigger\"><bpmn2:outgoing>Flow_0zva5bz</bpmn2:outgoing></bpmn2:startEvent><bpmn2:task id=\"Activity_08ieb5j\" name=\"Read JSON file from SFTP server\"><bpmn2:incoming>Flow_0zva5bz</bpmn2:incoming><bpmn2:outgoing>Flow_1ra9brw</bpmn2:outgoing><bpmn2:standardLoopCharacteristics /></bpmn2:task><bpmn2:task id=\"Activity_115gayk\" name=\"Convert JSON to CSV\"><bpmn2:incoming>Flow_0qvtxm9</bpmn2:incoming><bpmn2:outgoing>Flow_0g80fxb</bpmn2:outgoing></bpmn2:task><bpmn2:task id=\"Activity_1241p78\" name=\"Write CSV file to SFTP\"><bpmn2:incoming>Flow_0g80fxb</bpmn2:incoming><bpmn2:outgoing>Flow_1rszyoy</bpmn2:outgoing><bpmn2:standardLoopCharacteristics /></bpmn2:task><bpmn2:exclusiveGateway id=\"Gateway_0km4ymg\" name=\"Was the read successful?\" default=\"Flow_0xdexqs\"><bpmn2:incoming>Flow_1ra9brw</bpmn2:incoming><bpmn2:outgoing>Flow_0xdexqs</bpmn2:outgoing><bpmn2:outgoing>Flow_0qvtxm9</bpmn2:outgoing></bpmn2:exclusiveGateway><bpmn2:intermediateThrowEvent id=\"Event_0ou2vf3\" name=\"Throw an exception if the file is empty\"><bpmn2:incoming>Flow_0xdexqs</bpmn2:incoming><bpmn2:signalEventDefinition id=\"SignalEventDefinition_0xb4a27\" /></bpmn2:intermediateThrowEvent><bpmn2:endEvent id=\"Event_0bjpqh9\"><bpmn2:incoming>Flow_1rszyoy</bpmn2:incoming></bpmn2:endEvent><bpmn2:sequenceFlow id=\"Flow_0zva5bz\" sourceRef=\"StartEvent_1\" targetRef=\"Activity_08ieb5j\" /><bpmn2:sequenceFlow id=\"Flow_1ra9brw\" sourceRef=\"Activity_08ieb5j\" targetRef=\"Gateway_0km4ymg\" /><bpmn2:sequenceFlow id=\"Flow_0g80fxb\" sourceRef=\"Activity_115gayk\" targetRef=\"Activity_1241p78\" /><bpmn2:sequenceFlow id=\"Flow_0xdexqs\" name=\"no\" sourceRef=\"Gateway_0km4ymg\" targetRef=\"Event_0ou2vf3\" /><bpmn2:sequenceFlow id=\"Flow_0qvtxm9\" name=\"yes\" sourceRef=\"Gateway_0km4ymg\" targetRef=\"Activity_115gayk\" /><bpmn2:sequenceFlow id=\"Flow_1rszyoy\" sourceRef=\"Activity_1241p78\" targetRef=\"Event_0bjpqh9\" /><bpmn2:group id=\"Group_0a3zjbx\" categoryValueRef=\"CategoryValue_0ke6xzh\" /><bpmn2:group id=\"Group_168041r\" categoryValueRef=\"CategoryValue_1e4vx8h\" /></bpmn2:process><bpmn2:category id=\"Category_1cod83m\"><bpmn2:categoryValue id=\"CategoryValue_0ke6xzh\" value=\"Read and parse JSON\" /></bpmn2:category><bpmn2:category id=\"Category_0hlh7xg\"><bpmn2:categoryValue id=\"CategoryValue_1e4vx8h\" value=\"Create and write CSV file\" /></bpmn2:category><bpmndi:BPMNDiagram id=\"BPMNDiagram_1\"><bpmndi:BPMNPlane id=\"BPMNPlane_1\" bpmnElement=\"Process_1\"><bpmndi:BPMNShape id=\"BPMNShape_1xjwuo1\" bpmnElement=\"Activity_08ieb5j\"><dc:Bounds x=\"210\" y=\"280\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"BPMNShape_1cwmjpw\" bpmnElement=\"Gateway_0km4ymg\" isMarkerVisible=\"true\"><dc:Bounds x=\"345\" y=\"295\" width=\"50\" height=\"50\" /><bpmndi:BPMNLabel><dc:Bounds x=\"338\" y=\"265\" width=\"65\" height=\"27\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"BPMNShape_0f3hel6\" bpmnElement=\"StartEvent_1\"><dc:Bounds x=\"92\" y=\"302\" width=\"36\" height=\"36\" /><bpmndi:BPMNLabel><dc:Bounds x=\"75\" y=\"338\" width=\"75\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"BPMNShape_0uaho7o\" bpmnElement=\"Activity_115gayk\"><dc:Bounds x=\"500\" y=\"280\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"BPMNShape_06zr37k\" bpmnElement=\"Activity_1241p78\"><dc:Bounds x=\"650\" y=\"280\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"BPMNShape_0ewu79i\" bpmnElement=\"Event_0ou2vf3\"><dc:Bounds x=\"352\" y=\"412\" width=\"36\" height=\"36\" /><bpmndi:BPMNLabel><dc:Bounds x=\"333\" y=\"455\" width=\"74\" height=\"40\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"BPMNShape_1u775z3\" bpmnElement=\"Event_0bjpqh9\"><dc:Bounds x=\"822\" y=\"302\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNEdge id=\"Flow_0qvtxm9_di\" bpmnElement=\"Flow_0qvtxm9\"><di:waypoint x=\"395\" y=\"320\" /><di:waypoint x=\"500\" y=\"320\" /><bpmndi:BPMNLabel><dc:Bounds x=\"437\" y=\"302\" width=\"17\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_1rszyoy_di\" bpmnElement=\"Flow_1rszyoy\"><di:waypoint x=\"750\" y=\"320\" /><di:waypoint x=\"822\" y=\"320\" /></bpmndi:BPMNEdge><bpmndi:BPMNShape id=\"BPMNShape_07iwa0u\" bpmnElement=\"Group_0a3zjbx\"><dc:Bounds x=\"170\" y=\"230\" width=\"260\" height=\"282\" /><bpmndi:BPMNLabel><dc:Bounds x=\"260\" y=\"237\" width=\"79\" height=\"27\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNEdge id=\"BPMNEdge_011k09b\" bpmnElement=\"Flow_0zva5bz\"><di:waypoint x=\"128\" y=\"320\" /><di:waypoint x=\"210\" y=\"320\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"BPMNEdge_1ee59ze\" bpmnElement=\"Flow_1ra9brw\"><di:waypoint x=\"310\" y=\"320\" /><di:waypoint x=\"345\" y=\"320\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"BPMNEdge_1ytojmr\" bpmnElement=\"Flow_0g80fxb\"><di:waypoint x=\"600\" y=\"320\" /><di:waypoint x=\"650\" y=\"320\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"BPMNEdge_1rwr5jk\" bpmnElement=\"Flow_0xdexqs\"><di:waypoint x=\"370\" y=\"345\" /><di:waypoint x=\"370\" y=\"412\" /><bpmndi:BPMNLabel><dc:Bounds x=\"379\" y=\"378\" width=\"13\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNShape id=\"BPMNShape_0tyonuv\" bpmnElement=\"Group_168041r\"><dc:Bounds x=\"460\" y=\"230\" width=\"330\" height=\"282\" /><bpmndi:BPMNLabel><dc:Bounds x=\"586\" y=\"237\" width=\"81\" height=\"27\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn2:definitions>",
+					"ElementParameters": "[{\"Id\":\"StartEvent_1\",\"Type\":0,\"Parameters\":{},\"SelectedTypeId\":\"ManualTrigger\",\"PromoteResultAs\":null,\"Name\":\"Manual Trigger\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_08ieb5j\",\"Type\":1,\"Parameters\":{\"input\":{\"Path\":{\"mode\":\"text\",\"value\":\"{{#var.InFilePath}}\"},\"FileEncoding\":{\"mode\":\"select\",\"value\":\"ANSI\"},\"EnableBom\":{\"mode\":\"toggle\",\"value\":false},\"EncodingInString\":{\"mode\":\"text\",\"value\":\"\"}},\"connection\":{\"ConnectionTimeout\":{\"mode\":\"integer\",\"value\":60},\"Address\":{\"mode\":\"csharp\",\"value\":\"#var.ServerAddress\"},\"Port\":{\"mode\":\"integer\",\"value\":22},\"Authentication\":{\"mode\":\"select\",\"value\":\"UsernamePassword\"},\"Username\":{\"mode\":\"csharp\",\"value\":\"#var.ServerUser\"},\"Password\":{\"mode\":\"csharp\",\"value\":\"#var.ServerPassword\"},\"PrivateKeyFile\":{\"mode\":\"text\",\"value\":\"\"},\"PrivateKeyString\":{\"mode\":\"text\",\"value\":\"\"},\"PrivateKeyPassphrase\":{\"mode\":\"text\",\"value\":\"\"},\"ServerFingerPrint\":{\"mode\":\"text\",\"value\":\"\"},\"HostKeyAlgorithm\":{\"mode\":\"select\",\"value\":\"Any\"},\"UseKeyboardInteractiveAuthentication\":{\"mode\":\"toggle\",\"value\":false},\"PromptAndResponse\":[],\"BufferSize\":{\"mode\":\"integer\",\"value\":32}},\"cancellationToken\":null},\"SelectedTypeId\":\"/ProcessTask/7fe311ed-3e37-4669-8c6b-9e5792e996d0/v1\",\"PromoteResultAs\":null,\"Name\":\"Read JSON file from SFTP server\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":true,\"MaxRetryCount\":3,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_115gayk\",\"Type\":1,\"Parameters\":{\"input\":{\"InputType\":{\"mode\":\"select\",\"value\":\"Json\"},\"Delimiter\":{\"mode\":\"text\",\"value\":\";\"},\"Json\":{\"mode\":\"text\",\"value\":\"{{#result[Read JSON file from SFTP server]}}\"},\"Xml\":{\"mode\":\"xml\",\"value\":\"\"},\"XmlNodeElementName\":{\"mode\":\"text\",\"value\":\"\"},\"Headers\":{\"mode\":\"csharp\",\"value\":\"\"},\"Data\":{\"mode\":\"csharp\",\"value\":\"\"}},\"options\":{\"CultureInfo\":{\"mode\":\"text\",\"value\":\"\"},\"IncludeHeaderRow\":{\"mode\":\"toggle\",\"value\":true},\"NeverAddQuotesAroundValues\":{\"mode\":\"toggle\",\"value\":false},\"ReplaceNullsWith\":{\"mode\":\"text\",\"value\":\"\"}},\"cancellationToken\":null},\"SelectedTypeId\":\"/ProcessTask/b4eb0a05-6699-4ae9-82ce-83017a9f83c6/v1\",\"PromoteResultAs\":null,\"Name\":\"Convert JSON to CSV\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":false,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_1241p78\",\"Type\":1,\"Parameters\":{\"input\":{\"Path\":{\"mode\":\"text\",\"value\":\"{{#var.OutFilePath}}\"},\"Content\":{\"mode\":\"csharp\",\"value\":\"#result[Convert JSON to CSV].CSV\"},\"FileEncoding\":{\"mode\":\"select\",\"value\":\"ANSI\"},\"EnableBom\":{\"mode\":\"toggle\",\"value\":false},\"EncodingInString\":{\"mode\":\"text\",\"value\":\"\"},\"WriteBehaviour\":{\"mode\":\"select\",\"value\":\"Overwrite\"},\"AddNewLine\":{\"mode\":\"toggle\",\"value\":false}},\"connection\":{\"ConnectionTimeout\":{\"mode\":\"integer\",\"value\":60},\"Address\":{\"mode\":\"csharp\",\"value\":\"#var.ServerAddress\"},\"Port\":{\"mode\":\"integer\",\"value\":22},\"Authentication\":{\"mode\":\"select\",\"value\":\"UsernamePassword\"},\"Username\":{\"mode\":\"csharp\",\"value\":\"#var.ServerUser\"},\"Password\":{\"mode\":\"csharp\",\"value\":\"#var.ServerPassword\"},\"PrivateKeyFile\":{\"mode\":\"text\",\"value\":\"\"},\"PrivateKeyString\":{\"mode\":\"text\",\"value\":\"\"},\"PrivateKeyPassphrase\":{\"mode\":\"text\",\"value\":\"\"},\"ServerFingerPrint\":{\"mode\":\"text\",\"value\":\"\"},\"HostKeyAlgorithm\":{\"mode\":\"select\",\"value\":\"Any\"},\"UseKeyboardInteractiveAuthentication\":{\"mode\":\"toggle\",\"value\":false},\"PromptAndResponse\":[],\"BufferSize\":{\"mode\":\"integer\",\"value\":32}}},\"SelectedTypeId\":\"/ProcessTask/cbd72640-717d-493b-9955-c1d326ee1386/v1\",\"PromoteResultAs\":null,\"Name\":\"Write CSV file to SFTP\",\"Description\":\"\",\"IsDefault\":null,\"ShouldRetry\":true,\"MaxRetryCount\":3,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Gateway_0km4ymg\",\"Type\":2,\"Parameters\":{\"expression\":{\"mode\":\"csharp\",\"value\":\"!string.IsNullOrWhiteSpace(#result[Read JSON file from SFTP server].Content)\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"Was the read successful?\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_0ou2vf3\",\"Type\":6,\"Parameters\":{\"expression\":{\"mode\":\"text\",\"value\":\"An error occurred while reading file {{#var.InFilePath}}. Please contact support.”\"},\"bypassGlobalExceptionHandler\":{\"mode\":\"toggle\",\"value\":true}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_0bjpqh9\",\"Type\":5,\"Parameters\":{\"expression\":{\"mode\":\"text\",\"value\":\"CSV file was successfully written to {{#var.OutFilePath}}.\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Flow_0xdexqs\",\"Type\":4,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"no\",\"Description\":null,\"IsDefault\":true,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Flow_0qvtxm9\",\"Type\":4,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"yes\",\"Description\":null,\"IsDefault\":false,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null}]",
+					"ManualTriggerJson": "[]",
+					"IsSubprocess": false,
+					"TriggersJson": "[{\"$type\":\"ManualTrigger\",\"config\":{},\"name\":\"Manual Trigger\",\"id\":\"StartEvent_1\",\"shouldNotLogParameters\":null}]",
+					"AssemblyName": null,
+					"PackageId": null,
+					"PackageVersion": null,
+					"UsedTasksJson": "[\"/ProcessTask/7FE311ED-3E37-4669-8C6B-9E5792E996D0/v1\",\"/ProcessTask/B4EB0A05-6699-4AE9-82CE-83017A9F83C6/v1\",\"/ProcessTask/CBD72640-717D-493B-9955-C1D326EE1386/v1\"]",
+					"UsedSubprocessesJson": "{}",
+					"ProcessExecutionVersion": "",
+					"FrendsVersion": "5.7.2.1685",
+					"TargetFramework": "net8.0",
+					"StaticRequiredEnvironmentVariables": [],
+					"RequiredEnvironmentVariables": [],
+					"PromotedResultVariablesJson": "[]",
+					"MajorVersion": 1,
+					"MinorVersion": 0,
+					"IsForMonitoringRule": false,
+					"ProcessVariablesJson": null
+				},
+				"LinkedTasks": {
+					"ffbe58cf-a768-4223-96ab-30dd9f864951": [
+						{
+							"Id": "7fe311ed-3e37-4669-8c6b-9e5792e996d0",
+							"PackageId": "Frends.SFTP.ReadFile",
+							"PackageVersion": "2.1.0",
+							"Name": "Frends.SFTP.ReadFile.SFTP.ReadFile(Input, Connection, CancellationToken)",
+							"FrameworkIdentifier": ".NETCoreApp"
+						},
+						{
+							"Id": "b4eb0a05-6699-4ae9-82ce-83017a9f83c6",
+							"PackageId": "Frends.CSV.Create",
+							"PackageVersion": "1.1.0",
+							"Name": "Frends.CSV.Create.CSV.Create(Input, Options, CancellationToken)",
+							"FrameworkIdentifier": ".NETCoreApp"
+						},
+						{
+							"Id": "cbd72640-717d-493b-9955-c1d326ee1386",
+							"PackageId": "Frends.SFTP.WriteFile",
+							"PackageVersion": "2.2.0",
+							"Name": "Frends.SFTP.WriteFile.SFTP.WriteFile(Input, Connection)",
+							"FrameworkIdentifier": ".NETCoreApp"
+						}
+					]
+				},
+				"LinkedSubProcess": {},
+				"Version": "Acc41"
+			}
+		}
+	]
+}
