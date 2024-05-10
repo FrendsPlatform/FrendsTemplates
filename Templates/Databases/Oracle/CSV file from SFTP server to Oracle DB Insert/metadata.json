@@ -1,5 +1,5 @@
 {
-  "name": "CSV file from SFTP server to Oracle DB Insert",
+  "name": "CSV file from SFTP server to Oracle DB INSERT",
   "version": "1.0.0",
   "tags": [],
   "additionalSystemsUsed": []
