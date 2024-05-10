@@ -1,0 +1,6 @@
+{
+  "name": "MySQL SELECT to JSON file with SFTP upload",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": []
+}
