@@ -1,6 +1,4 @@
-This process will read a **Json** file, which contains key-value pairs representing the data to update the specified table in the **MySQL database**, from an **SFTP server**. 
-
-
+This process will read a **JSON** file from an **SFTP server**, which contains key-value pairs representing the data to update the specified table in the **MySQL database**. 
 
 ![Template](assets/Json_file_from_SFTP_server_to_MySQL_Database_UPDATE.svg)
 
@@ -15,11 +13,10 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template only performs updates into the **MySQL database** specified in the Process Variables.
-The input **Json** file will contain the data to be updated in key-value format and must not contain nested elements.
-It can contain any column names from the table that is to be updated.
 
+The input **JSON** file will contain the data to be updated in key-value format and must not contain nested elements. The field names in JSON file must correspond to MySQL table column names.
 
-**Example Json data**
+**Example JSON data**
 ```
 [
 	{
@@ -45,7 +42,7 @@ It can contain any column names from the table that is to be updated.
 
 # Error Handling
 
-This template does not handle transient errors separately, however the connection
+This template does not handle transient errors separately, however the connections
 to the **SFTP server** and **MySQL database** are retried three time before failing.
 
-The template does not handle any SQL errors that may occur - these will be handled as exceptions.
+The template does not handle any SQL errors that may occur - these will be thrown as exceptions.
