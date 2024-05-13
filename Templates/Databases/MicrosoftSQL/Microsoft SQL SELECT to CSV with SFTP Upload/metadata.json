@@ -1,0 +1,7 @@
+{
+  "name": "Microsoft SQL SELECT to CSV with SFTP upload",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": [
+  ]
+}
