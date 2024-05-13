@@ -1,5 +1,5 @@
-This template generates a **Json data** file from an **MicrosoftSQL database** **SELECT** statement. 
-Using this template, you can create a **Json** file by fetching data from an **MicrosoftSQL database** Server, and then transform it into **Json** file which will be saved on **SFTP server**.
+This template generates a **JSON data** file from an **MicrosoftSQL database** **SELECT** statement. 
+Using this template, you can create a **JSON** file by fetching data from an **MicrosoftSQL database** Server, and then transform it into **JSON** file which will be saved on **SFTP server**.
 
 ![Template](assets/MicrosoftSQL_Database_SELECT_to_JSON_file_with_SFTP_Upload.svg)
 
@@ -13,8 +13,10 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template creates a new **Json** file based on the data from the SQL query. 
+This template creates a new **JSON** file based on the data from the SQL query. 
+
 The variable SelectionCriteria provides the possibility to add conditions to the **SELECT** statement.
+
 In case of already existing file in the **SFTP server** path, old file will be overwritten.
 
 **Example JSON data**
@@ -58,6 +60,6 @@ In case of already existing file in the **SFTP server** path, old file will be o
 
 # Error Handling
 
-This template does not handle transient errors separately, however the connection to the SFTP server and MicrosoftSQL database are retried three time before failing.
+This template does not handle transient errors separately, however the connection to the SFTP server and Microsoft SQL database are retried three time before failing.
 
 The template does not handle any SQL errors that may occur - the errors will be thrown as exceptions.
