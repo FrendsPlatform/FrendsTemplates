@@ -7,7 +7,7 @@ Using this template, you can create a CSV file by fetching data from Microsoft S
 
 This template assumes that the following prerequisites are in place:
 
-- The MicrosoftSQL user has permissions to read data from the tables specified in the query.
+- The Microsoft SQL user has permissions to read data from the tables specified in the query.
 - The SFTP server user should have the permissions to connect and write the files that Frends needs to upload.
 
 
