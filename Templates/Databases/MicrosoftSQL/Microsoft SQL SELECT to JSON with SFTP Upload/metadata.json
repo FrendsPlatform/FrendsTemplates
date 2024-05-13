@@ -1,0 +1,7 @@
+{
+  "name": "MicrosoftSQL Database SELECT to JSON file with SFTP Upload",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": [
+  ]
+}
