@@ -14,19 +14,21 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template creates a new **CSV** file based on the data from the SQL query. 
+
 The variable SelectionCriteria provides the possibility to add conditions to the SELECT statement.
+
 In case of already existing file in **SFTP server** path, old file will be overwritten.
 
 **Example CSV data**
 
 ```
 email;address1;address2;country;state;city;zipcode;phone;firstname;lastname;title
-dave1021@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
-dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
-dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
-dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
-dave10521@frends.com;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
-dave10621@frends.com;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave1021@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
+dave10521@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;Dave;Twenty-Five-One;Mr
+dave10621@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;Dave;Twenty-Six-One;Mr
 ```
 
 # Error Handling
