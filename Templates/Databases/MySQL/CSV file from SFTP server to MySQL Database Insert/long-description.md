@@ -1,29 +1,38 @@
-This process will read a **CSV file** which contains key-value pairs representing the data to be insert into the MySQL database from an **SFTP server**. 
+This process will connect to an **SFTP server** and read a **CSV** file, which contains  the data to INSERT into the specified table in the **MySQL database**.
 
-
-
-![Template](assets/CSV file from SFTP server to MySQL Database Insert.svg)
+![Template](assets/CSV_file_from_SFTP_server_to_MySQL_Database_Insert.svg)
 
 # Prerequisites
 
 This template assumes that the following prerequisites are in place:
 
-- The SFTP server user should have the permissions to connect and access 
+- The **SFTP server** user should have the permissions to connect and access 
   the files that Frends needs to download.
-- The Frends agent has access to database where the data will be insert and the necessary permissions to perform the insert.
+- The Frends agent has access to the **MySQL database** where the data will be inserted and the necessary permissions to perform the insert.
+- The **CSV** column names are the same as the column names in the **MySQL database** table.
 
 # Implementation and Usage Notes
 
-This template only performs inserts into the database specified in the Process Variables.
-The input CSV file will contained the data to be inserted in key-value format and must only contain data for one record.
-**Exampls CSV data**
-name;age;email
-Emma Brown;28;emma.brown@example.com
+This template only performs INSERTs into the **MySQL database** table specified in the Process Variables.
 
+The input **CSV** file must contain data corresponding to the table structure in the database. The CSV headers should match the table column names.
+
+**Example CSV data**
+
+```
+email;address1;address2;country;state;city;zipcode;phone;firstname;lastname;title
+john@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;John;Twenty-Five-One;Mr
+john@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;John;Twenty-Six-One;Mr
+john@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;John;Twenty-Five-One;Mr
+john@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;John;Twenty-Six-One;Mr
+john@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;John;Twenty-Five-One;Mr
+john@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;John;Twenty-Six-One;Mr
+john@example.org;15440 River Drive;" #5100";USA;CA;Rivertown;123455;1234567895;John;Twenty-Five-One;Mr
+john@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;John;Twenty-Six-One;Mr
+```
 
 # Error Handling
 
-This template does not handle transient errors separately, however the connection
-to the SFTP server and Database are retried three time before failing.
+This template does not handle transient errors separately, however the connection to the **SFTP server** and **Oracle database** are retried three time before failing.
 
-The template does not handle any SQL errors that may occur.
+The template does not handle any SQL errors that may occur - the errors will be thrown as exceptions.
