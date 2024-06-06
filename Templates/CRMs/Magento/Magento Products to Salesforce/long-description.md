@@ -8,11 +8,11 @@ Using this template, you can insert your new Magento products to Salesforce.
 This template assumes that the following prerequisites are in place:
 
 - The Salesforce user should have access to client ID, secret and security token.
-- Price book for Magento is initialized in Salesforce.
+- Price book for Magento is initialized in Salesforce. It is labelled as "Magento Price Book" in this template.
 
 # Implementation and Usage Notes
 
-This template uses Salesforce queries to identify a product and the price book it's connected to. Price book, in which the product price is inserted, can be changed by altering the price book task parameters.
+This template uses Salesforce queries to identify a product and the price book it's connected to. The price book, in which the product price is inserted, can be changed by altering the name in the price book task parameters.
 Process variables include fields for both Salesforce and Magento credentials.
 
 # Error Handling
