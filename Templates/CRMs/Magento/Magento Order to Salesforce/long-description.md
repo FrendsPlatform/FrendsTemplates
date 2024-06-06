@@ -14,6 +14,7 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template uses Salesforce queries to get information about orders, contacts and price books.
+Shipping and handling costs are not handled by this template.
 Process variables include credentials fields for both Salesforce and Magento.
 
 # Error Handling
