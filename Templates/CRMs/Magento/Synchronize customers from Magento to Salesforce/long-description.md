@@ -14,9 +14,10 @@ This template assumes that the following prerequisites are in place:
 
 This template fetches all the customers from Magento, and then either inserts or updates them as Contacts in Salesforce. To determine if a Magento customer already has a corresponding Contact in Salesforce, the email addresses of the Magento customers are compared to those of the existing Contacts in Salesforce.
 
+Customers that have been deleted from Magento are not transferred to Salesforce.
+
 The credentials and URLs for connecting to both Magento and Salesforce are supplied to the template through defining the values in the corresponding process variables.
 
 # Error Handling
 
-Error handling is not implemented in this template.
-However, if transient errors are expected, retries for Salesforce connection and database queries can be enabled from the tasks.
+This template does not handle transient errors separately. If inserting or updating the contacts into Salesforce fails, the errors are logged in the result of the process.
