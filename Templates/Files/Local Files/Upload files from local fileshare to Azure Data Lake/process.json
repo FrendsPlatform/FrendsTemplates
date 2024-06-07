@@ -1,0 +1,64 @@
+{
+	"ProcessTemplates": [
+		{
+			"Name": "Upload files from local fileshare to Azure Data Lake",
+			"Modified": "2024-06-07T09:34:53.7467814",
+			"Modifier": "janne.pennanen@frends.com",
+			"Tags": [
+				"Fileshare",
+				"Azure Data Lake"
+			],
+			"TemplateProcessTags": [],
+			"Description": "This template process uploads files from a directory in the local fileshare matching a given pattern into Azure Data Lake.",
+			"Version": 1,
+			"UniqueIdentifier": "664f4191-7630-48d7-9d9e-9939284aa872",
+			"ProcessVariablesJson": "{\"TargetContainer\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The name of the container in which files will be uploaded.\"},\"AzureConnectionString\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"The connection string for the Azure Storage Account.\"},\"SourcePath\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The path of the source folder in the local fileshare.\"},\"TargetPath\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The path of the target folder in the container. If the folder doesn't exist, it will be created.\"},\"SourceFilePattern\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The pattern that specifies which files from the given source path will be uploaded.\"}}",
+			"ProcessInfo": {
+				"Process": {
+					"Name": "Upload files from local fileshare to Azure Data Lake",
+					"Modified": "2024-06-07T09:34:53.7467814",
+					"Modifier": "janne.pennanen@frends.com",
+					"TagString": null,
+					"Tags": [],
+					"Description": "This template process uploads files from a directory in the local fileshare matching a given pattern into Azure Data Lake.",
+					"Version": 1,
+					"UniqueIdentifier": "3293af81-e88d-490a-9394-58de29d73eca",
+					"GraphJson": null,
+					"Bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn2:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" id=\"sample-diagram\" targetNamespace=\"http://bpmn.io/schema/bpmn\" xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd\"><bpmn2:process id=\"Process_1\" isExecutable=\"false\"><bpmn2:startEvent id=\"StartEvent_1\" name=\"Manual\"><bpmn2:outgoing>Flow_12fcj59</bpmn2:outgoing></bpmn2:startEvent><bpmn2:task id=\"Activity_0akudyq\" name=\"Upload files to Azure Data Lake\"><bpmn2:incoming>Flow_12fcj59</bpmn2:incoming><bpmn2:outgoing>Flow_1k9wtg1</bpmn2:outgoing><bpmn2:property id=\"Property_0krqpq4\" name=\"__targetRef_placeholder\" /><bpmn2:dataInputAssociation id=\"DataInputAssociation_09rtbul\"><bpmn2:sourceRef>DataObjectReference_1notgd3</bpmn2:sourceRef><bpmn2:targetRef>Property_0krqpq4</bpmn2:targetRef></bpmn2:dataInputAssociation><bpmn2:dataOutputAssociation id=\"DataOutputAssociation_1pt21nf\"><bpmn2:targetRef>DataStoreReference_0k4nijd</bpmn2:targetRef></bpmn2:dataOutputAssociation></bpmn2:task><bpmn2:exclusiveGateway id=\"Gateway_0skkiam\" name=\"Was the upload successful?\" default=\"Flow_1a0umwz\"><bpmn2:incoming>Flow_1k9wtg1</bpmn2:incoming><bpmn2:outgoing>Flow_1a0umwz</bpmn2:outgoing><bpmn2:outgoing>Flow_098wa8f</bpmn2:outgoing></bpmn2:exclusiveGateway><bpmn2:sequenceFlow id=\"Flow_1k9wtg1\" sourceRef=\"Activity_0akudyq\" targetRef=\"Gateway_0skkiam\" /><bpmn2:intermediateThrowEvent id=\"Event_1lgwngo\" name=\"Throw error if upload failed\"><bpmn2:incoming>Flow_1a0umwz</bpmn2:incoming><bpmn2:signalEventDefinition /></bpmn2:intermediateThrowEvent><bpmn2:sequenceFlow id=\"Flow_1a0umwz\" name=\"no\" sourceRef=\"Gateway_0skkiam\" targetRef=\"Event_1lgwngo\" /><bpmn2:sequenceFlow id=\"Flow_12fcj59\" sourceRef=\"StartEvent_1\" targetRef=\"Activity_0akudyq\" /><bpmn2:endEvent id=\"Event_1ps9wfb\"><bpmn2:incoming>Flow_098wa8f</bpmn2:incoming></bpmn2:endEvent><bpmn2:sequenceFlow id=\"Flow_098wa8f\" name=\"yes\" sourceRef=\"Gateway_0skkiam\" targetRef=\"Event_1ps9wfb\" /><bpmn2:dataStoreReference id=\"DataStoreReference_0k4nijd\" name=\"Azure Data Lake\" /><bpmn2:dataObjectReference id=\"DataObjectReference_1notgd3\" name=\"Files from local fileshare\" dataObjectRef=\"DataObject_1cull11\" /><bpmn2:dataObject id=\"DataObject_1cull11\" /></bpmn2:process><bpmndi:BPMNDiagram id=\"BPMNDiagram_1\"><bpmndi:BPMNPlane id=\"BPMNPlane_1\" bpmnElement=\"Process_1\"><bpmndi:BPMNShape id=\"_BPMNShape_StartEvent_2\" bpmnElement=\"StartEvent_1\"><dc:Bounds x=\"632\" y=\"240\" width=\"36\" height=\"36\" /><bpmndi:BPMNLabel><dc:Bounds x=\"632\" y=\"276\" width=\"37\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Activity_0akudyq_di\" bpmnElement=\"Activity_0akudyq\"><dc:Bounds x=\"770\" y=\"218\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Gateway_0skkiam_di\" bpmnElement=\"Gateway_0skkiam\" isMarkerVisible=\"true\"><dc:Bounds x=\"935\" y=\"233\" width=\"50\" height=\"50\" /><bpmndi:BPMNLabel><dc:Bounds x=\"922\" y=\"290\" width=\"76\" height=\"27\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Event_1lgwngo_di\" bpmnElement=\"Event_1lgwngo\"><dc:Bounds x=\"942\" y=\"122\" width=\"36\" height=\"36\" /><bpmndi:BPMNLabel><dc:Bounds x=\"927\" y=\"92\" width=\"67\" height=\"27\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Event_1ps9wfb_di\" bpmnElement=\"Event_1ps9wfb\"><dc:Bounds x=\"1052\" y=\"240\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"DataStoreReference_0k4nijd_di\" bpmnElement=\"DataStoreReference_0k4nijd\"><dc:Bounds x=\"795\" y=\"115\" width=\"50\" height=\"50\" /><bpmndi:BPMNLabel><dc:Bounds x=\"779\" y=\"93\" width=\"82\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"DataObjectReference_1notgd3_di\" bpmnElement=\"DataObjectReference_1notgd3\"><dc:Bounds x=\"802\" y=\"355\" width=\"36\" height=\"50\" /><bpmndi:BPMNLabel><dc:Bounds x=\"783\" y=\"412\" width=\"75\" height=\"27\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNEdge id=\"DataInputAssociation_09rtbul_di\" bpmnElement=\"DataInputAssociation_09rtbul\"><di:waypoint x=\"820\" y=\"355\" /><di:waypoint x=\"820\" y=\"298\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"DataOutputAssociation_1pt21nf_di\" bpmnElement=\"DataOutputAssociation_1pt21nf\"><di:waypoint x=\"820\" y=\"218\" /><di:waypoint x=\"820\" y=\"165\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_1k9wtg1_di\" bpmnElement=\"Flow_1k9wtg1\"><di:waypoint x=\"870\" y=\"258\" /><di:waypoint x=\"935\" y=\"258\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_1a0umwz_di\" bpmnElement=\"Flow_1a0umwz\"><di:waypoint x=\"960\" y=\"233\" /><di:waypoint x=\"960\" y=\"158\" /><bpmndi:BPMNLabel><dc:Bounds x=\"969\" y=\"195\" width=\"13\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_12fcj59_di\" bpmnElement=\"Flow_12fcj59\"><di:waypoint x=\"668\" y=\"258\" /><di:waypoint x=\"770\" y=\"258\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_098wa8f_di\" bpmnElement=\"Flow_098wa8f\"><di:waypoint x=\"985\" y=\"258\" /><di:waypoint x=\"1052\" y=\"258\" /><bpmndi:BPMNLabel><dc:Bounds x=\"1010\" y=\"240\" width=\"17\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn2:definitions>",
+					"ElementParameters": "[{\"Id\":\"StartEvent_1\",\"Type\":0,\"Parameters\":{},\"SelectedTypeId\":\"ManualTrigger\",\"PromoteResultAs\":null,\"Name\":\"Manual\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"FrendsTestElementId\",\"Type\":19,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"Test\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_0akudyq\",\"Type\":1,\"Parameters\":{\"input\":{\"Source\":{\"SourceDirectory\":{\"mode\":\"csharp\",\"value\":\"#var.SourcePath\"},\"SourceFilePattern\":{\"mode\":\"csharp\",\"value\":\"#var.SourceFilePattern\"}},\"Destination\":{\"ConnectionMethod\":{\"mode\":\"select\",\"value\":\"ConnectionString\"},\"ContainerName\":{\"mode\":\"csharp\",\"value\":\"#var.TargetContainer\"},\"ConnectionString\":{\"mode\":\"csharp\",\"value\":\"#var.AzureConnectionString\"},\"StorageAccountName\":{\"mode\":\"text\",\"value\":\"\"},\"ApplicationID\":{\"mode\":\"text\",\"value\":\"\"},\"TenantID\":{\"mode\":\"text\",\"value\":\"\"},\"ClientSecret\":{\"mode\":\"text\",\"value\":\"\"},\"DestinationFolderName\":{\"mode\":\"csharp\",\"value\":\"#var.TargetPath\"}},\"Options\":{\"ThrowErrorOnFailure\":{\"mode\":\"toggle\",\"value\":false}},\"Overwrite\":{\"mode\":\"toggle\",\"value\":true},\"UploadFilesRecursively\":{\"mode\":\"toggle\",\"value\":false}},\"cancellationToken\":null},\"SelectedTypeId\":\"/ProcessTask/11965ff9-b033-4ebe-9523-ccfb320aee10/v1\",\"PromoteResultAs\":null,\"Name\":\"Upload files to Azure Data Lake\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":false,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Gateway_0skkiam\",\"Type\":2,\"Parameters\":{\"expression\":{\"mode\":\"csharp\",\"value\":\"#result.Success\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"Was the upload successful?\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_1lgwngo\",\"Type\":6,\"Parameters\":{\"expression\":{\"mode\":\"csharp\",\"value\":\"\\\"An error occurred when attempting to upload the files to Azure Data Lake.\\\"\"},\"bypassGlobalExceptionHandler\":{\"mode\":\"toggle\",\"value\":true}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Flow_1a0umwz\",\"Type\":4,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"no\",\"Description\":null,\"IsDefault\":true,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Flow_098wa8f\",\"Type\":4,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"yes\",\"Description\":null,\"IsDefault\":false,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_1ps9wfb\",\"Type\":5,\"Parameters\":{\"expression\":{\"mode\":\"csharp\",\"value\":\"$\\\"Files matching pattern {#var.SourceFilePattern} from {#var.SourcePath} successfully uploaded to Azure Data Lake.\\\"\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"DataStoreReference_0k4nijd\",\"Type\":22,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"Azure Data Lake\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"DataObjectReference_1notgd3\",\"Type\":21,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"Files from local fileshare\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null}]",
+					"ManualTriggerJson": "[]",
+					"IsSubprocess": false,
+					"TriggersJson": "[{\"$type\":\"ManualTrigger\",\"config\":{},\"name\":\"Manual\",\"id\":\"StartEvent_1\",\"shouldNotLogParameters\":null}]",
+					"AssemblyName": null,
+					"PackageId": null,
+					"PackageVersion": null,
+					"UsedTasksJson": "[\"/ProcessTask/11965FF9-B033-4EBE-9523-CCFB320AEE10/v1\"]",
+					"UsedSubprocessesJson": "{}",
+					"ProcessExecutionVersion": "",
+					"FrendsVersion": "5.7.2.1685",
+					"TargetFramework": "net8.0",
+					"StaticRequiredEnvironmentVariables": [],
+					"RequiredEnvironmentVariables": [],
+					"PromotedResultVariablesJson": "[]",
+					"MajorVersion": 1,
+					"MinorVersion": 0,
+					"IsForMonitoringRule": false,
+					"ProcessVariablesJson": null
+				},
+				"LinkedTasks": {
+					"3293af81-e88d-490a-9394-58de29d73eca": [
+						{
+							"Id": "11965ff9-b033-4ebe-9523-ccfb320aee10",
+							"PackageId": "Frends.AzureDataLake.UploadFiles",
+							"PackageVersion": "1.1.0",
+							"Name": "Frends.AzureDataLake.UploadFiles.AzureDataLake.UploadFiles(Input, CancellationToken)",
+							"FrameworkIdentifier": ".NETCoreApp"
+						}
+					]
+				},
+				"LinkedSubProcess": {},
+				"Version": "Acc41"
+			}
+		}
+	]
+}
