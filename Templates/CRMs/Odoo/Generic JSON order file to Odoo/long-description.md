@@ -60,5 +60,5 @@ Process variables include fields for both SFTP and Odoo credentials, SFTP and Od
 
 # Error Handling
 
-There are error checks after the tasks for reading the SFTP file and inserting Odoo data. If a task is not successful, error message will be appended to an exception variable and displayed at the end of the process. Next order or order line is handled after an error.
+There are error checks after the tasks for reading the SFTP file and inserting Odoo data. If a task is not successful, an error message will be appended to an exception variable and displayed at the end of the process. The next order or order line is handled after an error.
 Transient errors are not handled in this template, but if they are expected, retries for reading the file, data transform and Odoo insertions can be enabled from their tasks.
