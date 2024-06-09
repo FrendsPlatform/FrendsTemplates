@@ -13,7 +13,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template is used to insert order data to Odoo using Odoo models for order and order line. Other properties, such as activation, deactivation and deletion is not implemented in this template.
+This template is used to insert order data to Odoo using Odoo models for order and order line. Other properties, such as activation, deactivation and deletion are not implemented in this template.
 Process variables include fields for both SFTP and Odoo credentials, SFTP and Odoo addresses, SFTP file path, SFTP file name and Odoo database name.
 
 **Example JSON data**
