@@ -7,7 +7,7 @@ This Process uploads files from a **local filesystem** based on a **file mask** 
 This template assumes that the following prerequisites are in place:
 
 - The Frends agent has access to the local files that need to be uploaded.
-- The Azure user has the permission to upload files to the Data Lake.
+- The Azure user has the rights to upload files to the Data Lake.
 
 # Implementation and Usage Notes
 
