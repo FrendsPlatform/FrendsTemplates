@@ -1,0 +1,7 @@
+{
+    "name": "HTTP endpoint returning Microsoft SQL data as JSON",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+    ]
+  }

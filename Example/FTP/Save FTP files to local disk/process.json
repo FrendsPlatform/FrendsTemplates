@@ -1,48 +1,63 @@
-﻿{
-	"Processes": [
+{
+	"ProcessTemplates": [
 		{
 			"Name": "Example Template - Save files from FTP to local directory",
-			"Modified": "2024-03-20T13:30:28.0620688",
+			"Modified": "2024-05-05T14:25:15.9189869",
 			"Modifier": "jefim.borissov@frends.com",
-			"TagString": null,
 			"Tags": [],
+			"TemplateProcessTags": [
+				"ExampleData"
+			],
 			"Description": "",
-			"Version": 4,
-			"UniqueIdentifier": "fb2ea200-bd9b-4f2f-801e-d547bd923137",
-			"GraphJson": "",
-			"Bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn2:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" id=\"sample-diagram\" targetNamespace=\"http://bpmn.io/schema/bpmn\" xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd\"><bpmn2:process id=\"Process_1\" isExecutable=\"false\"><bpmn2:startEvent id=\"StartEvent_1\" name=\"Manual\"><bpmn2:outgoing>Flow_104dllx</bpmn2:outgoing></bpmn2:startEvent><bpmn2:task id=\"Activity_0mjg6c1\" name=\"FTP file download\"><bpmn2:incoming>Flow_104dllx</bpmn2:incoming><bpmn2:outgoing>Flow_0bxsjvx</bpmn2:outgoing></bpmn2:task><bpmn2:sequenceFlow id=\"Flow_104dllx\" sourceRef=\"StartEvent_1\" targetRef=\"Activity_0mjg6c1\" /><bpmn2:endEvent id=\"Event_1oqfzot\"><bpmn2:incoming>Flow_0bxsjvx</bpmn2:incoming></bpmn2:endEvent><bpmn2:sequenceFlow id=\"Flow_0bxsjvx\" sourceRef=\"Activity_0mjg6c1\" targetRef=\"Event_1oqfzot\" /></bpmn2:process><bpmndi:BPMNDiagram id=\"BPMNDiagram_1\"><bpmndi:BPMNPlane id=\"BPMNPlane_1\" bpmnElement=\"Process_1\"><bpmndi:BPMNShape id=\"_BPMNShape_StartEvent_2\" bpmnElement=\"StartEvent_1\"><dc:Bounds x=\"412\" y=\"240\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Activity_0mjg6c1_di\" bpmnElement=\"Activity_0mjg6c1\"><dc:Bounds x=\"540\" y=\"218\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Event_1oqfzot_di\" bpmnElement=\"Event_1oqfzot\"><dc:Bounds x=\"732\" y=\"240\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNEdge id=\"Flow_104dllx_di\" bpmnElement=\"Flow_104dllx\"><di:waypoint x=\"448\" y=\"258\" /><di:waypoint x=\"540\" y=\"258\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_0bxsjvx_di\" bpmnElement=\"Flow_0bxsjvx\"><di:waypoint x=\"640\" y=\"258\" /><di:waypoint x=\"732\" y=\"258\" /></bpmndi:BPMNEdge></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn2:definitions>",
-			"ElementParameters": "[{\"Id\":\"StartEvent_1\",\"Type\":0,\"Parameters\":{},\"SelectedTypeId\":\"ManualTrigger\",\"PromoteResultAs\":null,\"Name\":\"Manual\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_0mjg6c1\",\"Type\":1,\"Parameters\":{\"source\":{\"Directory\":{\"mode\":\"text\",\"value\":\"\"},\"FileName\":{\"mode\":\"text\",\"value\":\"\"},\"NotFoundAction\":{\"mode\":\"select\",\"value\":\"Error\"},\"Operation\":{\"mode\":\"select\",\"value\":\"Delete\"},\"FileNameAfterTransfer\":{\"mode\":\"text\",\"value\":\"\"},\"DirectoryToMoveAfterTransfer\":{\"mode\":\"text\",\"value\":\"\"}},\"destination\":{\"Directory\":{\"mode\":\"text\",\"value\":\"\"},\"FileName\":{\"mode\":\"text\",\"value\":\"\"},\"Action\":{\"mode\":\"select\",\"value\":\"Error\"}},\"connection\":{\"Address\":{\"mode\":\"text\",\"value\":\"\"},\"Port\":{\"mode\":\"integer\",\"value\":21},\"UserName\":{\"mode\":\"text\",\"value\":\"\"},\"Password\":{\"mode\":\"text\",\"value\":\"\"},\"TransportType\":{\"mode\":\"select\",\"value\":\"Binary\"},\"Mode\":{\"mode\":\"select\",\"value\":\"Passive\"},\"KeepConnectionAliveInterval\":{\"mode\":\"integer\",\"value\":0},\"ConnectionTimeout\":{\"mode\":\"integer\",\"value\":60},\"Encoding\":{\"mode\":\"text\",\"value\":\"\"},\"BufferSize\":{\"mode\":\"integer\",\"value\":4096},\"UseFTPS\":{\"mode\":\"toggle\",\"value\":false},\"SecureDataChannel\":{\"mode\":\"toggle\",\"value\":true},\"SslMode\":{\"mode\":\"select\",\"value\":\"None\"},\"EnableClientAuth\":{\"mode\":\"toggle\",\"value\":false},\"ClientCertificateName\":{\"mode\":\"text\",\"value\":\"\"},\"ClientCertificateThumbprint\":{\"mode\":\"text\",\"value\":\"\"},\"ValidateAnyCertificate\":{\"mode\":\"toggle\",\"value\":false},\"ClientCertificatePath\":{\"mode\":\"text\",\"value\":\"\"},\"CertificateHashStringSHA1\":{\"mode\":\"text\",\"value\":\"\"}},\"options\":{\"ThrowErrorOnFail\":{\"mode\":\"toggle\",\"value\":true},\"RenameSourceFileBeforeTransfer\":{\"mode\":\"toggle\",\"value\":true},\"RenameDestinationFileDuringTransfer\":{\"mode\":\"toggle\",\"value\":true},\"CreateDestinationDirectories\":{\"mode\":\"toggle\",\"value\":false},\"PreserveLastModified\":{\"mode\":\"toggle\",\"value\":false},\"OperationLog\":{\"mode\":\"toggle\",\"value\":true}},\"info\":{\"TransferName\":{\"mode\":\"text\",\"value\":\"FTPDownload\"},\"WorkDir\":{\"mode\":\"text\",\"value\":\"\"},\"ProcessUri\":{\"mode\":\"csharp\",\"value\":\"#process.uri\"},\"TaskExecutionID\":{\"mode\":\"csharp\",\"value\":\"#process.executionid\"}},\"cancellationToken\":null},\"SelectedTypeId\":\"/ProcessTask/68bae913-e3aa-4507-bf6c-595f08140fb4/v1\",\"PromoteResultAs\":null,\"Name\":\"FTP file download\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":false,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_1oqfzot\",\"Type\":5,\"Parameters\":{\"expression\":{\"mode\":\"csharp\",\"value\":\"#result\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null}]",
-			"ManualTriggerJson": "[]",
-			"IsSubprocess": false,
-			"TriggersJson": "[{\"$type\":\"ManualTrigger\",\"config\":{},\"name\":\"Manual\",\"id\":\"StartEvent_1\",\"shouldNotLogParameters\":null}]",
-			"AssemblyName": "Frends.ExecutableProcess.frends_ExampleTem",
-			"PackageId": "ExampleTemfb2ea200bd9b4f2f801ed547bd923137",
-			"PackageVersion": "0.1.4",
-			"UsedTasksJson": "[\"/ProcessTask/68BAE913-E3AA-4507-BF6C-595F08140FB4/v1\"]",
-			"UsedSubprocessesJson": "{}",
-			"ProcessExecutionVersion": "4.4.1",
-			"FrendsVersion": "5.7.0.1432",
-			"TargetFramework": "net8.0",
-			"StaticRequiredEnvironmentVariables": [],
-			"RequiredEnvironmentVariables": [],
-			"PromotedResultVariablesJson": "[]",
-			"MajorVersion": 0,
-			"MinorVersion": 1,
-			"IsForMonitoringRule": false,
-			"ProcessVariablesJson": "{\"FtpHost\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"FtpHost description\"},\"FtpUsername\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"FtpUsername description\"},\"FtpPassword\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"FtpPassword description\"}}"
-		}
-	],
-	"LinkedTasks": {
-		"fb2ea200-bd9b-4f2f-801e-d547bd923137": [
-			{
-				"Id": "68bae913-e3aa-4507-bf6c-595f08140fb4",
-				"PackageId": "Frends.FTP.DownloadFiles",
-				"PackageVersion": "1.1.3",
-				"Name": "Frends.FTP.DownloadFiles.FTP.DownloadFiles(Source, Destination, Connection, Options, Info, CancellationToken)",
-				"FrameworkIdentifier": ".NETCoreApp"
+			"Version": 1,
+			"UniqueIdentifier": "5d06113a-195d-4d71-b262-6e4a19fc1ace",
+			"ProcessVariablesJson": "{\"FtpHost\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"FtpHost description\"},\"FtpUsername\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"FtpUsername description\"},\"FtpPassword\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"FtpPassword description\"}}",
+			"ProcessInfo": {
+				"Process": {
+					"Name": "Example Template - Save files from FTP to local directory",
+					"Modified": "2024-05-05T14:25:15.9189869",
+					"Modifier": "jefim.borissov@frends.com",
+					"TagString": null,
+					"Tags": [],
+					"Description": "",
+					"Version": 1,
+					"UniqueIdentifier": "1d5e65a4-ca88-4ee1-b069-d20df46c642e",
+					"GraphJson": null,
+					"Bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn2:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" id=\"sample-diagram\" targetNamespace=\"http://bpmn.io/schema/bpmn\" xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd\"><bpmn2:process id=\"Process_1\" isExecutable=\"false\"><bpmn2:startEvent id=\"StartEvent_1\" name=\"Manual\"><bpmn2:outgoing>Flow_104dllx</bpmn2:outgoing></bpmn2:startEvent><bpmn2:task id=\"Activity_0mjg6c1\" name=\"FTP file download\"><bpmn2:incoming>Flow_104dllx</bpmn2:incoming><bpmn2:outgoing>Flow_0bxsjvx</bpmn2:outgoing></bpmn2:task><bpmn2:sequenceFlow id=\"Flow_104dllx\" sourceRef=\"StartEvent_1\" targetRef=\"Activity_0mjg6c1\" /><bpmn2:endEvent id=\"Event_1oqfzot\"><bpmn2:incoming>Flow_0bxsjvx</bpmn2:incoming></bpmn2:endEvent><bpmn2:sequenceFlow id=\"Flow_0bxsjvx\" sourceRef=\"Activity_0mjg6c1\" targetRef=\"Event_1oqfzot\" /></bpmn2:process><bpmndi:BPMNDiagram id=\"BPMNDiagram_1\"><bpmndi:BPMNPlane id=\"BPMNPlane_1\" bpmnElement=\"Process_1\"><bpmndi:BPMNShape id=\"_BPMNShape_StartEvent_2\" bpmnElement=\"StartEvent_1\"><dc:Bounds x=\"412\" y=\"240\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Activity_0mjg6c1_di\" bpmnElement=\"Activity_0mjg6c1\"><dc:Bounds x=\"540\" y=\"218\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Event_1oqfzot_di\" bpmnElement=\"Event_1oqfzot\"><dc:Bounds x=\"732\" y=\"240\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNEdge id=\"Flow_104dllx_di\" bpmnElement=\"Flow_104dllx\"><di:waypoint x=\"448\" y=\"258\" /><di:waypoint x=\"540\" y=\"258\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_0bxsjvx_di\" bpmnElement=\"Flow_0bxsjvx\"><di:waypoint x=\"640\" y=\"258\" /><di:waypoint x=\"732\" y=\"258\" /></bpmndi:BPMNEdge></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn2:definitions>",
+					"ElementParameters": "[{\"Id\":\"StartEvent_1\",\"Type\":0,\"Parameters\":{},\"SelectedTypeId\":\"ManualTrigger\",\"PromoteResultAs\":null,\"Name\":\"Manual\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_0mjg6c1\",\"Type\":1,\"Parameters\":{\"source\":{\"Directory\":{\"mode\":\"text\",\"value\":\"\"},\"FileName\":{\"mode\":\"text\",\"value\":\"\"},\"NotFoundAction\":{\"mode\":\"select\",\"value\":\"Error\"},\"Operation\":{\"mode\":\"select\",\"value\":\"Delete\"},\"FileNameAfterTransfer\":{\"mode\":\"text\",\"value\":\"\"},\"DirectoryToMoveAfterTransfer\":{\"mode\":\"text\",\"value\":\"\"}},\"destination\":{\"Directory\":{\"mode\":\"text\",\"value\":\"\"},\"FileName\":{\"mode\":\"text\",\"value\":\"\"},\"Action\":{\"mode\":\"select\",\"value\":\"Error\"}},\"connection\":{\"Address\":{\"mode\":\"text\",\"value\":\"\"},\"Port\":{\"mode\":\"integer\",\"value\":21},\"UserName\":{\"mode\":\"text\",\"value\":\"\"},\"Password\":{\"mode\":\"text\",\"value\":\"\"},\"TransportType\":{\"mode\":\"select\",\"value\":\"Binary\"},\"Mode\":{\"mode\":\"select\",\"value\":\"Passive\"},\"KeepConnectionAliveInterval\":{\"mode\":\"integer\",\"value\":0},\"ConnectionTimeout\":{\"mode\":\"integer\",\"value\":60},\"Encoding\":{\"mode\":\"text\",\"value\":\"\"},\"BufferSize\":{\"mode\":\"integer\",\"value\":4096},\"UseFTPS\":{\"mode\":\"toggle\",\"value\":false},\"SecureDataChannel\":{\"mode\":\"toggle\",\"value\":true},\"SslMode\":{\"mode\":\"select\",\"value\":\"None\"},\"EnableClientAuth\":{\"mode\":\"toggle\",\"value\":false},\"ClientCertificateName\":{\"mode\":\"text\",\"value\":\"\"},\"ClientCertificateThumbprint\":{\"mode\":\"text\",\"value\":\"\"},\"ValidateAnyCertificate\":{\"mode\":\"toggle\",\"value\":false},\"ClientCertificatePath\":{\"mode\":\"text\",\"value\":\"\"},\"CertificateHashStringSHA1\":{\"mode\":\"text\",\"value\":\"\"}},\"options\":{\"ThrowErrorOnFail\":{\"mode\":\"toggle\",\"value\":true},\"RenameSourceFileBeforeTransfer\":{\"mode\":\"toggle\",\"value\":true},\"RenameDestinationFileDuringTransfer\":{\"mode\":\"toggle\",\"value\":true},\"CreateDestinationDirectories\":{\"mode\":\"toggle\",\"value\":false},\"PreserveLastModified\":{\"mode\":\"toggle\",\"value\":false},\"OperationLog\":{\"mode\":\"toggle\",\"value\":true}},\"info\":{\"TransferName\":{\"mode\":\"text\",\"value\":\"FTPDownload\"},\"WorkDir\":{\"mode\":\"text\",\"value\":\"\"},\"ProcessUri\":{\"mode\":\"csharp\",\"value\":\"#process.uri\"},\"TaskExecutionID\":{\"mode\":\"csharp\",\"value\":\"#process.executionid\"}},\"cancellationToken\":null},\"SelectedTypeId\":\"/ProcessTask/68bae913-e3aa-4507-bf6c-595f08140fb4/v1\",\"PromoteResultAs\":null,\"Name\":\"FTP file download\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":false,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_1oqfzot\",\"Type\":5,\"Parameters\":{\"expression\":{\"mode\":\"csharp\",\"value\":\"#result\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null}]",
+					"ManualTriggerJson": "[]",
+					"IsSubprocess": false,
+					"TriggersJson": "[{\"$type\":\"ManualTrigger\",\"config\":{},\"name\":\"Manual\",\"id\":\"StartEvent_1\",\"shouldNotLogParameters\":null}]",
+					"AssemblyName": null,
+					"PackageId": null,
+					"PackageVersion": null,
+					"UsedTasksJson": "[\"/ProcessTask/68BAE913-E3AA-4507-BF6C-595F08140FB4/v1\"]",
+					"UsedSubprocessesJson": "{}",
+					"ProcessExecutionVersion": "",
+					"FrendsVersion": "5.7.0.1432",
+					"TargetFramework": "net8.0",
+					"StaticRequiredEnvironmentVariables": [],
+					"RequiredEnvironmentVariables": [],
+					"PromotedResultVariablesJson": "[]",
+					"MajorVersion": 0,
+					"MinorVersion": 1,
+					"IsForMonitoringRule": false,
+					"ProcessVariablesJson": null
+				},
+				"LinkedTasks": {
+					"1d5e65a4-ca88-4ee1-b069-d20df46c642e": [
+						{
+							"Id": "68bae913-e3aa-4507-bf6c-595f08140fb4",
+							"PackageId": "Frends.FTP.DownloadFiles",
+							"PackageVersion": "1.1.3",
+							"Name": "Frends.FTP.DownloadFiles.FTP.DownloadFiles(Source, Destination, Connection, Options, Info, CancellationToken)",
+							"FrameworkIdentifier": ".NETCoreApp"
+						}
+					]
+				},
+				"LinkedSubProcess": {},
+				"Version": "Acc41"
 			}
-		]
-	},
-	"LinkedSubProcess": {},
-	"Version": "Acc41"
+		}
+	]
 }
