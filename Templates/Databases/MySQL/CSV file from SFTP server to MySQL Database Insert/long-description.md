@@ -15,7 +15,7 @@ This template assumes that the following prerequisites are in place:
 
 This template only performs INSERTs into the **MySQL database** table specified in the Process Variables.
 
-The input **CSV** file must contain data corresponding to the table structure in the database. The CSV headers should match the table column names.
+The input **CSV** file must contain data corresponding to the table structure in the MySQL database. The CSV headers should match the table column names.
 
 **Example CSV data**
 
@@ -33,6 +33,6 @@ john@example.org;16440 River Drive;" #6100";USA;CA;Rivertown;123456;1234567896;J
 
 # Error Handling
 
-This template does not handle transient errors separately, however the connection to the **SFTP server** and **Oracle database** are retried three time before failing.
+This template does not handle transient errors separately.
 
 The template does not handle any SQL errors that may occur - the errors will be thrown as exceptions.
