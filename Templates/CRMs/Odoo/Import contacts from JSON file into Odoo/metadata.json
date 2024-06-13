@@ -1,0 +1,7 @@
+{
+    "name": "Import contacts from JSON file into Odoo",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+    ]
+}

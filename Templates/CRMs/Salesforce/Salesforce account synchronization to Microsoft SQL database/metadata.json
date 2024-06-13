@@ -1,0 +1,7 @@
+{
+    "name": "Salesforce account synchronization to Microsoft SQL database",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+    ]
+  }
