@@ -1,4 +1,4 @@
-This process reads a **CSV file** from an **SFTP server** which contains data to be updated in an **MicrosoftSQL database**. It then forms an UPDATE statement based on the data and executes it. 
+This process reads a **CSV file** from an **SFTP server** which contains data to be updated in an **MySQL database**. It then forms an UPDATE statement based on the data and executes it. 
 
 
 
