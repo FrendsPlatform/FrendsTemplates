@@ -11,7 +11,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template process creates new a JSON file based on data in the input CSV file and uploads it to an SFTP server. The data is written as is, with each row in the CSV forming one JSON object. If the target JSON file already exists, it will by default be overwritten, but this behavior can be changed to e.g., append the data to the existing file.
+This template process creates a new JSON file based on data in the input CSV file and uploads it to an SFTP server. The data is written as is, with each row in the CSV forming one JSON object. If the target JSON file already exists, it will by default be overwritten, but this behavior can be changed to e.g., append the data to the existing file.
 
 The default port used for both the input and target servers is 23. This can be changed in the corresponding tasks.
 
