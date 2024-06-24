@@ -8,7 +8,7 @@ Using this template, you can insert your new Magento products and prices to Sale
 This template assumes that the following prerequisites are in place:
 
 - The Salesforce user should have access to client ID, secret and security token.
-- Price book for Magento is initialized in Salesforce. It is labelled as "Magento Price Book" in this template.
+- The price book for Magento is initialized in Salesforce. It is labelled as "Magento Price Book" in this template.
 
 # Implementation and Usage Notes
 
