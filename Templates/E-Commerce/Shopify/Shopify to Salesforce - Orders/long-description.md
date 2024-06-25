@@ -13,7 +13,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template uses Salesforce queries to get information about orders, contacts and price books. Orders created by this template are matched by their reference number to avoid duplicates. Contact is matched with the customer by the customer email address. Price book is identified by name, and the entry in the price book is matched by both price book id and product code.
+This template uses Salesforce queries to get information about orders, contacts and price books. Orders created by this template are matched by their reference number to avoid duplicates. Contact is matched with the customer by the customer's email address. Price book is identified by name, and the entry in the price book is matched by both the price book id and the product code.
 Shipping and handling costs are not handled by this template.
 Process variables include credential fields for both Salesforce and Shopify.
 
