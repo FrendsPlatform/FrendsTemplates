@@ -19,5 +19,5 @@ Process variables include credential fields for both Salesforce and Shopify.
 
 # Error Handling
 
-Each task is followed by an error check. If an error occurs while handling an order or a line item, the handling will stop, and next order or item will be taken for handling. Any errors encountered will be displayed at the end of the process.
+Each task is followed by an error check. If an error occurs while handling an order or a line item, the handling will stop, and the next order or item will be taken for handling. Any errors encountered will be displayed at the end of the process.
 If transient errors are expected, retries for Salesforce and Shopify connections can be enabled from the tasks. Transient errors are not handled.
