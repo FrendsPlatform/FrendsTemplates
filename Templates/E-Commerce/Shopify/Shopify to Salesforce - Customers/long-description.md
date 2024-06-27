@@ -21,4 +21,4 @@ Process variables include the credentials and URLs for connecting to both Shopif
 # Error Handling
 
 There is an error check after any tasks regarding Shopify and Salesforce. If an error occurs during customer handling, an error message is added to the exception variable. Then the next contact is taken for handling. All error messages are shown at the end of the process.
-Transient errors are not handled separately. Retries for any tasks can be enabled, if transient errors are expected.
+Transient errors are not handled separately. Retries for any tasks can be enabled if transient errors are expected.
