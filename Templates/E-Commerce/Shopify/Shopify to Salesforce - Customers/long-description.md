@@ -1,5 +1,5 @@
 This template synchronizes customers from Shopify to Salesforce as contacts.
-Using this template, you can synchronize the list of customers and their name, email and address from Shopify to Salesforce.
+Using this template, you can synchronize the list of customers and their names, emails, and addresses from Shopify to Salesforce.
 
 ![Template](assets/Shopify_to_Salesforce_-_Customers.svg)
 
