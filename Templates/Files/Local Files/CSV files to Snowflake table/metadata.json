@@ -1,0 +1,7 @@
+{
+    "name": "CSV files to Snowflake table",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+    ]
+  }
