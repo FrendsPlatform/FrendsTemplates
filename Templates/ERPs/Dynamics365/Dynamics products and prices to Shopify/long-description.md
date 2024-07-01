@@ -1,4 +1,4 @@
-This template requests products and their prices from the specified Dynamics 365 instance, and either inserts or updates each product in the designated Shopify store after mapping them to a compatible format.
+This template retrieves products and their prices from the specified Dynamics 365 instance, and either inserts or updates each product in the designated Shopify store after mapping them to a compatible format.
 
 ![Template](assets/Dynamics_products_and_prices_to_Shopify.svg)
 
@@ -13,7 +13,7 @@ This template assumes that the following prerequisites are in place:
 
 The template either inserts or updates products in Shopify, depending on whether any products with the same title are found. As the title is not necessarily unique, the process then checks for a matching Shopify stock keeping unit (SKU). This approach is used because the API does not support direct searches using the SKU.
 
-The template does not consider different product categories or variants. It inserts a new product with a single variant, using the Dynamics product number as the SKU.
+The template does not consider different product categories or variants. It inserts a new product with a single variant, assigning the Dynamics product number as the SKU.
 
 Any discounts, taxes, and additional charges are excluded from the template.
 
