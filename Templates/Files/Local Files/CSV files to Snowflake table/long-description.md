@@ -1,4 +1,4 @@
-This template uploads local CSV files to Snowflake table stage. Then the file content is inserted to the Snowflake table.
+This template uploads local CSV files to a staging area within Snowflake. After staging, the file content is moved to the Snowflake table.
 Using this template, you can insert any kind of data from your CSV files to the Snowflake table.
 
 ![Template](assets/CSV_files_to_Snowflake_table.svg)
