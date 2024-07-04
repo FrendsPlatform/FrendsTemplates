@@ -12,7 +12,8 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template finds a local folder and checks the folder for files. For each file in the local folder, the file content is read and submitted to ChatGPT with a prompt to summarize the file content. Then the summary is inserted to the Microsoft SQL database table with an SQL query. The database should contain columns for at least the file name, the date and time the summary is input to the table, and the summary itself.
+This template finds a local folder and checks the folder for files. For each file in the local folder, the file content is read and submitted to ChatGPT with a prompt to summarize the file content.
+The summary is inserted to the Microsoft SQL database table with an SQL query. The task for executing the query utilizes parameters to prevent SQL injections. The database should contain columns for at least the file name, the date and time the summary is input to the table, and the summary itself.
 Other database queries, such as deleting and updating the entries, are not utilized by this template.
 
 Process variables include the local folder path, ChatGPT API key, ChatGPT model you're using, ChatGPT chat prompt for starting the summarization, the connection string to Microsoft SQL database and the database table name.
