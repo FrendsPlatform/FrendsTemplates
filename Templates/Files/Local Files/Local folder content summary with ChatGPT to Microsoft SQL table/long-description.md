@@ -1,5 +1,5 @@
-This template will read a local folder's content(s) and ask ChatGPT to summarize the file(s). The summary is then inserted to a Microsoft SQL database table.
-Using this template, you can summarize your folder's content and store the summary into your Microsoft SQL database table.
+This template will read the contents of a local folder and uses ChatGPT to summarize each file. The summaries are then inserted to a Microsoft SQL database table.
+Using this template, you can automatically generate and store summaries of your folder's contents in your Microsoft SQL database table.
 
 ![Template](assets/Local_folder_content_summary_with_ChatGPT_to_Microsoft_SQL_table.svg)
 
@@ -14,6 +14,7 @@ This template assumes that the following prerequisites are in place:
 
 This template finds a local folder and checks the folder for files. For each file in the local folder, the file content is read and submitted to ChatGPT with a prompt to summarize the file content. Then the summary is inserted to the Microsoft SQL database table with an SQL query. The database should contain columns for at least the file name, the date and time the summary is input to the table, and the summary itself.
 Other database queries, such as deleting and updating the entries, are not utilized by this template.
+
 Process variables include the local folder path, ChatGPT API key, ChatGPT model you're using, ChatGPT chat prompt for starting the summarization, the connection string to Microsoft SQL database and the database table name.
 
 # Error Handling
