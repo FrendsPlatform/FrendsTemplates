@@ -13,7 +13,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template processes each file by reading it as a byte array and sending it to the Document Intelligence API. Different file types should be processed in separate runs since the document processing model and media type must be specified for each analysis request. These can be configured with process variables.
+This template processes each file by reading it as a byte array and sending it to the Document Intelligence API. Different file types should be processed in separate runs, since the document processing model and media type must be specified for each analysis request. These can be configured with process variables.
 
 Extraction results are fetched with a separate API call. As the extraction may not be immediately ready, the process will request the results once per second until the analysis is complete, or until the maximum number of iterations is reached. The maximum iterations can be adjusted in the settings of the while loop.
 
