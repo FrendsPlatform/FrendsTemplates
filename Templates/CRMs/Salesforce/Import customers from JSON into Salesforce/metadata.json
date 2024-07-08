@@ -1,0 +1,7 @@
+{
+    "name": "Import customers from JSON into Salesforce",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+    ]
+  }
