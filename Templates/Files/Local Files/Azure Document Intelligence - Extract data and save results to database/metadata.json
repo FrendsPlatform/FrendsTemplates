@@ -1,0 +1,8 @@
+{
+  "name": "Azure Document Intelligence - Extract data and save results to database",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": [
+    "AzureDocumentIntelligence"
+  ]
+}
