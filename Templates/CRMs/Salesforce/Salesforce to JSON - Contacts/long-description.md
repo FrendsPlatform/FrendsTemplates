@@ -16,5 +16,5 @@ Process variables include fields for the Salesforce credentials and the output f
 
 # Error Handling
 
-This template checks for errors after attempting to get the contact information from Salesforce task.
+This template checks for errors after attempting to get the contact information from Salesforce.
 If transient errors are expected, retries for the file write and Salesforce connections can be configured in the corresponding tasks.

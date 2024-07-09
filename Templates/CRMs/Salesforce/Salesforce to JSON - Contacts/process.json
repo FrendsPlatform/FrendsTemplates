@@ -9,7 +9,7 @@
 				"Salesforce"
 			],
 			"TemplateProcessTags": [],
-			"Description": "This template process exports customer data from Salesforce into a JSON file that is then saved locally.",
+			"Description": "This template process exports contact data from Salesforce into a JSON file that is then saved locally.",
 			"Version": 1,
 			"UniqueIdentifier": "500f31af-bb93-4ec1-aef8-7a2784e83688",
 			"ProcessVariablesJson": "{\"SalesforceBaseUrl\":{\"Value\":\"\\\"https://<my-salesforce-instance>.my.salesforce.com\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The base URL for your Salesforce instance, ending in my.salesforce.com.\"},\"SalesforceUser\":{\"Value\":\"\\\"myUsername\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The username for your Salesforce account.\"},\"SalesforcePassword\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"The password for your Salesforce account.\"},\"SalesforceSecurityToken\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"The security token for Salesforce.\"},\"SalesforceClientID\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The client ID for Salesforce.\"},\"SalesforceClientSecret\":{\"Value\":\"\\\"\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"The client secret for Salesforce.\"},\"OutFilePath\":{\"Value\":\"\\\"/path/output-file-name.json\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The full path to the desired output location, including the name of the file to be written.\"}}",
@@ -20,7 +20,7 @@
 					"Modifier": "janne.pennanen@frends.com",
 					"TagString": null,
 					"Tags": [],
-					"Description": "This template process exports customer data from Salesforce into a JSON file that is then saved locally.",
+					"Description": "This template process exports contact data from Salesforce into a JSON file that is then saved locally.",
 					"Version": 1,
 					"UniqueIdentifier": "4a6fd706-b8ae-446b-8817-96116d6442a0",
 					"GraphJson": null,
