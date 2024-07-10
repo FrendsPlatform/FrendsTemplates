@@ -1,7 +1,7 @@
 This template process reads customer information from a **JSON** file in the local fileshare and creates or updates the customers in **Salesforce** as contacts.
 Using this template, you can insert or update customers into Salesforce as contacts.
 
-![Template](assets/Import_customers_from_JSON_into_Salesforce.svg)
+![Template](assets/JSON_to_Salesforce_Customers.svg)
 
 # Prerequisites
 
@@ -48,7 +48,7 @@ Process variables include fields for the Salesforce credentials and the path to 
         "Fax": "87654321",
         "FirstName": "Second",
         "LastName": "Customer",
-        "MailingCIty": "London",
+        "MailingCity": "London",
         "MailingCountry": "United Kingdom",
         "MailingPostalCode": "12345",
         "MailingStreet": "Example Lane 3",
