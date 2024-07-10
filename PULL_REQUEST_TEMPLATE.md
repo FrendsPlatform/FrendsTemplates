@@ -1,17 +1,20 @@
 Checklist for review:
 - [ ] Process name is fine, uses normal casing and descriptive
+  - [ ] If applicable, the process name follows the naming convention "{source/format} to {destination/format} - {object}"
 - [ ] Process description is fine, uses normal casing, dots and is descriptive
-  - [ ] Element names use normal casing, no unneeded capital letters.
+  - [ ] Element names use normal casing, no unneeded capital letters
 - [ ] Correct casing used for formats and terms, e.g. CSV, FTP, JSON, Avro
   - [ ] Element names do not contain dots
-  - [ ] Comments / note element text are in good language and end with dots.
+  - [ ] Comments / note element text are in good language and end with dots
 - [ ] Template parameters checked
-  - [ ] Parameter descriptions are good and end with dots.
+  - [ ] Parameter follows the CamelCase naming convention, abbreviations included, e.g. ConnectionString, BaseUrl, ApiKey
+  - [ ] Parameter descriptions are good and end with dots
   - [ ] Sensitive parameters are marked as secrets
-- [ ] "Turn off logging" switch is on for any task that has sensitive data as output
-- [ ] End "balls" like error throws and return statements have titles (double-click) and reasonable information.
+- [ ] "Turn off logging" switch is on for any task that has sensitive data as output, e.g. tokens in the header.
+- [ ] Process end points like error throws and return statements have titles (double-click) and reasonable information.
   - [ ] Results have good summaries, preferably with statistics of some sort like "processed X files"
   - [ ] Errors have some error info, usually from task (e.g. some ErrorMessage property contains additional error info)
+  - [ ] Errors are pointed downwards from their respective source, e.g. an exclusive decision
 - [ ] Process is organised with groups (dashed boxes)
 - [ ] Straight lines are preferred where possible
 - [ ] Subprocesses are forbidden
@@ -20,4 +23,4 @@ Checklist for review:
 - [ ] Process export file is present (process.json)
 - [ ] Process description file is present (all sections filled in)
 - [ ] Process description has a SVG screenshot of the process
-- [ ] Tempalte files are going to the correct folder
+- [ ] Template files are going to the correct folder
