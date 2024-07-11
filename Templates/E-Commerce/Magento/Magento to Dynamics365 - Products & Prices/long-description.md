@@ -1,4 +1,4 @@
-This template process retrieves information of products and their prices from **Magento** and either inserts or updates them into **Dynamics365**.
+This template process retrieves information about products and their prices from **Magento** and either inserts or updates them into **Dynamics365**.
 Using this template, you can synchronize products and their prices from Magento to Dynamics365.
 
 ![Template](assets/Magento-to-Dynamics365-Products-Prices.svg)
@@ -14,7 +14,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-To insert products into Dynamics365, a unit of measurement has to be defined for the products. By default, this process uses a unit of measurement called "Primary Unit", but this behavior can be changed to another unit in the corresponding task. In any case, the desired unit of measurement, be it the default Primary Unit or another one, has to exists in Dynamics365.
+To insert products into Dynamics365, a unit of measurement has to be defined for the products. By default, this process uses a unit of measurement called "Primary Unit", but this behavior can be changed to another unit in the corresponding task. In any case, the desired unit of measurement, be it the default Primary Unit or another one, has to exist in Dynamics365.
 
 The products to be inserted or updated must also be connected to a Price List on Dynamics365, to correctly determine their price. This template assumes that a Price List called "Magento Price List" has been created into Dynamics365 before using it. The process will then insert the products into the Price List. The currency selected for the Price List determines the currency the products will use for their prices. Another Price List can be used by changing the corresponding tasks.
 
