@@ -11,7 +11,7 @@ This template assumes that the following prerequisites are in place:
 - Shopify access token is accessible.
 - HubSpot user exists for performing the synchronization.
 - HubSpot access token is accessible.
-- Shopify customer exists in HubSpot as a contact. Another template exists for that synchronization.
+- Shopify customer exists in HubSpot as a contact. Another template exists for this synchronization.
 
 # Implementation and Usage Notes
 
