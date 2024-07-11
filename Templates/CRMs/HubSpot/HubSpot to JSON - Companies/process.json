@@ -1,0 +1,61 @@
+{
+	"ProcessTemplates": [
+		{
+			"Name": "HubSpot to JSON - Companies",
+			"Modified": "2024-07-11T08:09:32.3421033",
+			"Modifier": "charlotta.bergstrom@frends.com",
+			"Tags": [],
+			"TemplateProcessTags": [],
+			"Description": "This template retrieves company data from HubSpot and downloads it to a local fileshare as a single JSON file.",
+			"Version": 2,
+			"UniqueIdentifier": "42c37c64-161d-444f-b1ea-83979a669e2b",
+			"ProcessVariablesJson": "{\"HubSpotAPIKey\":{\"Value\":\"\\\"ExampleAPIKey\\\"\",\"IsSecret\":true,\"Mode\":\"text\",\"Description\":\"The API key for accessing the HubSpot API.\"},\"TargetFilePath\":{\"Value\":\"\\\"/example-directory/example-filename.json\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The full path of the resulting JSON file, including the file name.\"},\"CompanyProperties\":{\"Value\":\"\\\"domain,name,address,city,state,zip,country,phone\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The company attributes fetched with the HubSpot API request.\"},\"CompanyAssociations\":{\"Value\":\"\\\"contacts,deals\\\"\",\"IsSecret\":false,\"Mode\":\"text\",\"Description\":\"The companies' connections to other object types fetched with the HubSpot API request.\"}}",
+			"ProcessInfo": {
+				"Process": {
+					"Name": "HubSpot to JSON - Companies",
+					"Modified": "2024-07-11T08:09:32.3421033",
+					"Modifier": "charlotta.bergstrom@frends.com",
+					"TagString": null,
+					"Tags": [],
+					"Description": "This template retrieves company data from HubSpot and downloads it to a local fileshare as a single JSON file.",
+					"Version": 1,
+					"UniqueIdentifier": "7df1e46f-999a-4fc6-839a-7cec0b78baad",
+					"GraphJson": null,
+					"Bpmn": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bpmn2:definitions xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" id=\"sample-diagram\" targetNamespace=\"http://bpmn.io/schema/bpmn\" xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd\"><bpmn2:process id=\"Process_1\" isExecutable=\"false\"><bpmn2:startEvent id=\"StartEvent_1\" name=\"Manual\"><bpmn2:outgoing>Flow_0f16grx</bpmn2:outgoing></bpmn2:startEvent><bpmn2:task id=\"Activity_0w1thgm\" name=\"Download companies to a JSON file\"><bpmn2:incoming>Flow_0f16grx</bpmn2:incoming><bpmn2:outgoing>Flow_1bem8xs</bpmn2:outgoing><bpmn2:property id=\"Property_1gy1wzb\" name=\"__targetRef_placeholder\" /><bpmn2:dataInputAssociation id=\"DataInputAssociation_1dh6x88\"><bpmn2:sourceRef>DataStoreReference_0nv3b5d</bpmn2:sourceRef><bpmn2:targetRef>Property_1gy1wzb</bpmn2:targetRef></bpmn2:dataInputAssociation></bpmn2:task><bpmn2:sequenceFlow id=\"Flow_0f16grx\" sourceRef=\"StartEvent_1\" targetRef=\"Activity_0w1thgm\" /><bpmn2:endEvent id=\"Event_1svcqes\"><bpmn2:incoming>Flow_1bem8xs</bpmn2:incoming></bpmn2:endEvent><bpmn2:sequenceFlow id=\"Flow_1bem8xs\" sourceRef=\"Activity_0w1thgm\" targetRef=\"Event_1svcqes\" /><bpmn2:dataStoreReference id=\"DataStoreReference_0nv3b5d\" name=\"HubSpot\" /></bpmn2:process><bpmndi:BPMNDiagram id=\"BPMNDiagram_1\"><bpmndi:BPMNPlane id=\"BPMNPlane_1\" bpmnElement=\"Process_1\"><bpmndi:BPMNShape id=\"_BPMNShape_StartEvent_2\" bpmnElement=\"StartEvent_1\"><dc:Bounds x=\"432\" y=\"240\" width=\"36\" height=\"36\" /><bpmndi:BPMNLabel><dc:Bounds x=\"432\" y=\"276\" width=\"37\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Activity_0w1thgm_di\" bpmnElement=\"Activity_0w1thgm\"><dc:Bounds x=\"540\" y=\"218\" width=\"100\" height=\"80\" /><bpmndi:BPMNLabel /></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"DataStoreReference_0nv3b5d_di\" bpmnElement=\"DataStoreReference_0nv3b5d\"><dc:Bounds x=\"565\" y=\"105\" width=\"50\" height=\"50\" /><bpmndi:BPMNLabel><dc:Bounds x=\"568\" y=\"75\" width=\"44\" height=\"14\" /></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id=\"Event_1svcqes_di\" bpmnElement=\"Event_1svcqes\"><dc:Bounds x=\"712\" y=\"240\" width=\"36\" height=\"36\" /></bpmndi:BPMNShape><bpmndi:BPMNEdge id=\"DataInputAssociation_1dh6x88_di\" bpmnElement=\"DataInputAssociation_1dh6x88\"><di:waypoint x=\"590\" y=\"155\" /><di:waypoint x=\"590\" y=\"218\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_0f16grx_di\" bpmnElement=\"Flow_0f16grx\"><di:waypoint x=\"468\" y=\"258\" /><di:waypoint x=\"540\" y=\"258\" /></bpmndi:BPMNEdge><bpmndi:BPMNEdge id=\"Flow_1bem8xs_di\" bpmnElement=\"Flow_1bem8xs\"><di:waypoint x=\"640\" y=\"258\" /><di:waypoint x=\"712\" y=\"258\" /></bpmndi:BPMNEdge></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn2:definitions>",
+					"ElementParameters": "[{\"Id\":\"StartEvent_1\",\"Type\":0,\"Parameters\":{},\"SelectedTypeId\":\"ManualTrigger\",\"PromoteResultAs\":null,\"Name\":\"Manual\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Activity_0w1thgm\",\"Type\":1,\"Parameters\":{\"input\":{\"Url\":{\"mode\":\"text\",\"value\":\"https://api.hubapi.com/crm/v3/objects/companies?properties={{#var.CompanyProperties}}&associations={{#var.CompanyAssociations}}\"},\"Headers\":[{\"Name\":{\"mode\":\"text\",\"value\":\"Content-Type\"},\"Value\":{\"mode\":\"text\",\"value\":\"application/json\"}}],\"FilePath\":{\"mode\":\"csharp\",\"value\":\"#var.TargetFilePath\"}},\"options\":{\"Authentication\":{\"mode\":\"select\",\"value\":\"OAuth\"},\"Username\":{\"mode\":\"text\",\"value\":\"\"},\"Password\":{\"mode\":\"text\",\"value\":\"\"},\"Token\":{\"mode\":\"csharp\",\"value\":\"#var.HubSpotAPIKey\"},\"ClientCertificateSource\":{\"mode\":\"select\",\"value\":\"CertificateStore\"},\"ClientCertificateFilePath\":{\"mode\":\"text\",\"value\":\"\"},\"ClientCertificateInBase64\":{\"mode\":\"text\",\"value\":\"\"},\"ClientCertificateKeyPhrase\":{\"mode\":\"text\",\"value\":\"\"},\"CertificateThumbprint\":{\"mode\":\"text\",\"value\":\"\"},\"LoadEntireChainForCertificate\":{\"mode\":\"toggle\",\"value\":true},\"ConnectionTimeoutSeconds\":{\"mode\":\"integer\",\"value\":30},\"FollowRedirects\":{\"mode\":\"toggle\",\"value\":true},\"AllowInvalidCertificate\":{\"mode\":\"toggle\",\"value\":false},\"AllowInvalidResponseContentTypeCharSet\":{\"mode\":\"toggle\",\"value\":false},\"ThrowExceptionOnErrorResponse\":{\"mode\":\"toggle\",\"value\":false},\"AutomaticCookieHandling\":{\"mode\":\"toggle\",\"value\":true}},\"cancellationToken\":null},\"SelectedTypeId\":\"/ProcessTask/3ddfe11d-d0df-42c0-bc05-044549638f86/v1\",\"PromoteResultAs\":null,\"Name\":\"Download companies to a JSON file\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":false,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"Event_1svcqes\",\"Type\":5,\"Parameters\":{\"expression\":{\"mode\":\"text\",\"value\":\"Company data exported to {{#result[Download companies to a JSON file].FilePath}}.\"}},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":null,\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null},{\"Id\":\"DataStoreReference_0nv3b5d\",\"Type\":22,\"Parameters\":{},\"SelectedTypeId\":null,\"PromoteResultAs\":null,\"Name\":\"HubSpot\",\"Description\":null,\"IsDefault\":null,\"ShouldRetry\":null,\"MaxRetryCount\":null,\"ShouldNotLogResult\":null,\"ShouldDispose\":null}]",
+					"ManualTriggerJson": "[]",
+					"IsSubprocess": false,
+					"TriggersJson": "[{\"$type\":\"ManualTrigger\",\"config\":{},\"name\":\"Manual\",\"id\":\"StartEvent_1\",\"shouldNotLogParameters\":null}]",
+					"AssemblyName": null,
+					"PackageId": null,
+					"PackageVersion": null,
+					"UsedTasksJson": "[\"/ProcessTask/3DDFE11D-D0DF-42C0-BC05-044549638F86/v1\"]",
+					"UsedSubprocessesJson": "{}",
+					"ProcessExecutionVersion": "",
+					"FrendsVersion": "5.7.3.1743",
+					"TargetFramework": "net8.0",
+					"StaticRequiredEnvironmentVariables": [],
+					"RequiredEnvironmentVariables": [],
+					"PromotedResultVariablesJson": "[]",
+					"MajorVersion": 1,
+					"MinorVersion": 0,
+					"IsForMonitoringRule": false,
+					"ProcessVariablesJson": null
+				},
+				"LinkedTasks": {
+					"7df1e46f-999a-4fc6-839a-7cec0b78baad": [
+						{
+							"Id": "3ddfe11d-d0df-42c0-bc05-044549638f86",
+							"PackageId": "Frends.HTTP.DownloadFile",
+							"PackageVersion": "1.0.0",
+							"Name": "Frends.HTTP.DownloadFile.HTTP.DownloadFile(Input, Options, CancellationToken)",
+							"FrameworkIdentifier": ".NETCoreApp"
+						}
+					]
+				},
+				"LinkedSubProcess": {},
+				"Version": "Acc41"
+			}
+		}
+	]
+}
