@@ -8,11 +8,11 @@ Using this template you can synchronize customers from Adobe Commerce / Magento 
 This template assumes that the following prerequisites are in place:
 
 - The Magento user should be eligible to obtain an admin authorization token from Magento.
-- The Dynamics365 user should have accesss to the client and tenant IDs and the client secret.
+- The Dynamics365 user should have access to the client and tenant IDs and the client secret.
 
 # Implementation and Usage Notes
 
-This template fetches all customers from Magento, and then either inserts or updates them as Contacts in Dynamics365. To determine if a Magento customer already has a corresponding Contact in Dynamics365, the email addresses of the Magento customers are compared to those of the existing Contacts in Dynamics365.
+This template fetches all customers from Magento, and then either inserts or updates them as contacts in Dynamics365. To determine if a Magento customer already has a corresponding contact in Dynamics365, the email addresses of the Magento customers are compared to those of the existing contacts in Dynamics365.
 
 Customers that have been deleted from Magento are not transferred.
 
