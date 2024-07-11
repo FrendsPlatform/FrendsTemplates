@@ -1,6 +1,6 @@
 This template exports the orders and line items from Shopify and imports them to HubSpot as deals.
 
-Using this template, you can insert order and their respective items' data from Shopify to HubSpot.
+Using this template, you can insert orders and their respective items' data from Shopify to HubSpot.
 
 ![Template](assets/Shopify_to_HubSpot_-_Orders.svg)
 
