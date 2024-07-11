@@ -7,7 +7,7 @@ This template reads files from a local fileshare, extracts data from them with A
 This template assumes that the following prerequisites are in place:
 
 - The Frends agent has access to the local directory containing the files.
-- Using the Azure Document Intelligence API requires an API key and the base URL for accessing the endpoints.
+- The Azure Document Intelligence API key and the base URL are accessible.
 - The Microsoft SQL user has access to the database with permissions to perform the insert.
 - The database table where the results will be saved needs to be created beforehand. To use the template without adjustments, the table should include columns for an automatically generating ID, the file name in string format, and the analysis result returned by the Document Intelligence API as JSON column type. The table structure should be customized as needed.
 
