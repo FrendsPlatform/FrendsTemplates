@@ -11,7 +11,9 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template either inserts or updates each company in HubSpot, depending on whether a company with a matching name is found. To use the template without modifications, ensure the JSON data for each company matches the format required for creating companies via the API. If the data format does not match, the template can be adjusted to include additional mapping.
+The path to the JSON file in the local fileshare is determined in the process variables. The template either inserts or updates each company in HubSpot, depending on whether a company with a matching name is found. 
+
+To use the template without modifications, ensure the JSON data matches the format required for creating companies via the API. If the data format does not match, the template can be adjusted to include additional mapping.
 
 **Example JSON data structure**
 ```
