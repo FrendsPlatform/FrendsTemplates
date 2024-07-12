@@ -1,4 +1,4 @@
-This template retrieves company data from HubSpot, and downloads it to a local fileshare as a single JSON file.
+This template retrieves company data from HubSpot and downloads it to a local fileshare as a single JSON file.
 
 ![Template](assets/HubSpot_to_JSON_-_Companies.svg)
 
@@ -6,7 +6,7 @@ This template retrieves company data from HubSpot, and downloads it to a local f
 
 This template assumes that the following prerequisites are in place:
 
-- Using the HubSpot API requires an API key.
+- HubSpot API key is accessible.
 - The Frends agent has access to the local fileshare to which the resulting JSON file will be saved.
 - No file with the same name exists in the selected file path.
 
