@@ -1,4 +1,4 @@
-This template reads a JSON file containing company data from a local fileshare, and either inserts or updates each company in HubSpot.
+This template reads a JSON file containing company data from a local fileshare and either inserts or updates each company in HubSpot.
 
 ![Template](assets/JSON_to_HubSpot_-_Companies.svg)
 
@@ -7,7 +7,7 @@ This template reads a JSON file containing company data from a local fileshare, 
 This template assumes that the following prerequisites are in place:
 
 - The Frends agent has access to the local fileshare containing the JSON file.
-- Using the HubSpot API requires an API key.
+- HubSpot API key is accessible.
 
 # Implementation and Usage Notes
 
