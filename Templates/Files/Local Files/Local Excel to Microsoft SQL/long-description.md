@@ -24,4 +24,5 @@ Process variables include the path name to the local folder, the Microsoft SQL t
 # Error Handling
 
 Each task is followed by an error check. If an error occurs when handling a file, that file's data won't be uploaded and the next file will be taken for handling. Any errors encountered will be noted at the end of the process.
+
 If transient errors are expected, retries can be enabled from the tasks. Transient errors are not handled.
