@@ -26,3 +26,5 @@ Checklist for review:
 - [ ] Template files are going to the correct folder
 - [ ] Markdown paragraphs are separated with two newlines, so there is a blank line inbetween two paragraphs
 - [ ] If some system is integrated using e.g. a HTTP task (meaning we do not use a native connector for the system), then the system should be mentioned in additional systems used in metadata.json
+- [ ] If the template is handling some sample JSON data - make sure that the sample data is included in the long description (just one-two elements is enough)
+- [ ] If the template is assuming that there is a database table ready for data insertion / updates - include the table structure in the long description as a `CREATE TABLE` scipt.
