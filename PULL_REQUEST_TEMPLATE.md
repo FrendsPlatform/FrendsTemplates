@@ -24,3 +24,5 @@ Checklist for review:
 - [ ] Process description file is present (all sections filled in)
 - [ ] Process description has a SVG screenshot of the process
 - [ ] Template files are going to the correct folder
+- [ ] Markdown paragraphs are separated with two newlines, so there is a blank line inbetween two paragraphs
+- [ ] If some system is integrated using e.g. a HTTP task (meaning we do not use a native connector for the system), then the system should be mentioned in additional systems used in metadata.json
