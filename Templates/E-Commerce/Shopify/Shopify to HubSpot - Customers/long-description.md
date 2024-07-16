@@ -17,6 +17,7 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template uses HTTP requests GET, PATCH and POST to perform operations on both Shopify and HubSpot. GET is used to retrieve customer information from Shopify. POST is used to filter the search data in HubSpot by Shopify customer email and to insert new contact data to HubSpot. PATCH is used to update existing contacts' data with the new information from Shopify.
+
 Other operations are not performed by the template.
 
 Process variables include base urls and access tokens for both Shopify and HubSpot.
@@ -26,4 +27,5 @@ Process variables include base urls and access tokens for both Shopify and HubSp
 Each task is followed by an error check. If an error occurs while handling a customer, the handling will stop and the next customer will be taken for handling. All encountered errors will be appended to the exception variable and shown at the end of the process.
 
 Connection retries and exception throws are turned on by default in searching the HubSpot contacts for matching email, because the search API endpoints are rate limited to four requests per second per authentication token.
+
 If any other transient errors are expected, retries for can be enabled from the tasks. Transient errors are not handled.
