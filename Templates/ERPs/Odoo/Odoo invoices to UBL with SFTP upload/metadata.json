@@ -1,0 +1,6 @@
+{
+    "name": "Odoo invoices to UBL with SFTP upload",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": []
+}
