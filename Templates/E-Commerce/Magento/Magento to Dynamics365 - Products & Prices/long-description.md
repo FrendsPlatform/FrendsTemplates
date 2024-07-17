@@ -1,4 +1,5 @@
 This template process retrieves information about products and their prices from **Magento** and either inserts or updates them into **Dynamics365**.
+
 Using this template, you can synchronize products and their prices from Magento to Dynamics365.
 
 ![Template](assets/Magento-to-Dynamics365-Products-Prices.svg)
