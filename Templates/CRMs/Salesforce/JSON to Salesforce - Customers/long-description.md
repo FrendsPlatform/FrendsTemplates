@@ -1,4 +1,5 @@
 This template process reads customer information from a **JSON** file in the local fileshare and creates or updates the customers in **Salesforce** as contacts.
+
 Using this template, you can insert or update customers into Salesforce as contacts.
 
 ![Template](assets/JSON_to_Salesforce_Customers.svg)
@@ -12,6 +13,7 @@ This template assumes that the following prerequisites are in place:
 # Implementation and Usage Notes
 
 This template reads a JSON file from the local fileshare containing customer data and creates or updates the customers as contacts into Salesforce.
+
 Process variables include fields for the Salesforce credentials and the path to the input file.
 
 **Sample JSON data:**
@@ -66,4 +68,5 @@ Process variables include fields for the Salesforce credentials and the path to 
 # Error Handling
 
 This template checks for errors after each task, and proceeds accordingly. If an error is encountered when e.g., creating a contact into Salesforce, the process moves on to the next customer and an error message is appended to the error variable which is displayed at the end of the process.
+
 If transient errors are expected, retries for the file read and Salesforce connections can be configured in the tasks.
