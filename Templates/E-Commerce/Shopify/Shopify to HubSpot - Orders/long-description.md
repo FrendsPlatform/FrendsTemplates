@@ -25,7 +25,10 @@ Process variables include base urls and access tokens for both Shopify and HubSp
 
 # Error Handling
 
-Each task is followed by an error check. If an error occurs while handling an order or a line item, the handling will stop and the next order or line item will be taken for handling. All encountered errors will be appended to the exception variable and shown at the end of the process.
+Each task is followed by an error check. If an error occurs while handling an order, the handling will stop and the next order will be taken for handling. If an error is encountered when handling a line item, the order is deleted to prevent inserting only partially successful orders and the next order will be taken for handling.
+
+All encountered errors will be appended to the exception variable and shown at the end of the process.
 
 Connection retries and exception throws are turned on by default in searching the HubSpot deals for matching names, because the search API endpoints are rate limited to four requests per second per authentication token.
+
 If any other transient errors are expected, retries can be enabled from the tasks. Transient errors are not handled.
