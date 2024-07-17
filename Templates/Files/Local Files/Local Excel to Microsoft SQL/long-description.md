@@ -21,6 +21,27 @@ Excel files should not include headers - only the data to be inserted is require
 
 Process variables include the path name to the local folder, the Microsoft SQL table name and the connection string for Microsoft SQL.
 
+**Example database table**
+
+```sql
+CREATE TABLE CustomerFeedback (
+    [Date] DATE,
+    [CustomerName] VARCHAR(255),
+    [Product] VARCHAR(255),
+    [Rating] FLOAT,
+    [Comments] TEXT,
+    [FollowUpRequired] VARCHAR(3)
+);
+```
+
+**Example Excel structure**
+
+```
+11.7.2024	Daniel Matthews	    Cafe Corto	        5	    So delicious!	            no
+11.7.2024	Kate Thompson	    Blueberry muffin	4.5	    Yummy! Just a bit dry.	    no
+12.7.2024	Matthew Daniels	    Hot cocoa	        2	    Too hot and bitter.	        yes
+```
+
 # Error Handling
 
 Each task is followed by an error check. If an error occurs when handling a file, that file's data won't be uploaded and the next file will be taken for handling. Any errors encountered will be noted at the end of the process.
