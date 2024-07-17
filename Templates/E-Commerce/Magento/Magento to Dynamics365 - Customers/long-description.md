@@ -1,4 +1,5 @@
 This template fetches customers from Adobe Commerce / Magento and inserts or updates them to Dynamics365 as contacts.
+
 Using this template you can synchronize customers from Adobe Commerce / Magento to Dynamics365.
 
 ![Template](assets/Magento-to-Dynamics365-Customers.svg)
