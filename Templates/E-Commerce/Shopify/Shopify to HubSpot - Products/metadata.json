@@ -1,0 +1,9 @@
+{
+    "name": "Shopify to HubSpot - Products",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+        "Shopify",
+        "HubSpot"
+    ]
+  }
