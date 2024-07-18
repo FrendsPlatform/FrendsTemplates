@@ -7,7 +7,7 @@ This template reads a JSON file containing company data from a local fileshare a
 This template assumes that the following prerequisites are in place:
 
 - The Frends agent has access to the local fileshare containing the JSON file.
-- HubSpot API key is accessible.
+- HubSpot access token is accessible.
 
 # Implementation and Usage Notes
 
