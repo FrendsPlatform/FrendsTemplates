@@ -11,11 +11,11 @@ This template assumes that the following prerequisites are in place:
 - Shopify access token is accessible.
 - HubSpot user exists for performing the synchronization.
 - HubSpot access token is accessible.
-- Shopify customer exists in HubSpot as a contact. Another template exists for this synchronization.
+- The Shopify customer exists in HubSpot as a contact for each new Shopify order. Another template exists to synchronize Shopify customers to HubSpot as contacts.
 
 # Implementation and Usage Notes
 
-This template uses HTTP requests GET and POST to perform operations on both Shopify and HubSpot. GET is used to retrieve order information from Shopify and contact information from HubSpot. POST is used to filter the search data in HubSpot by deal name and to insert new deal and line item data to HubSpot. Note that the new deals in HubSpot will be named uniquely with "Shopify_" followed by Shopify order number.
+This template uses HTTP requests GET, POST and DELETE to perform operations on both Shopify and HubSpot. GET is used to retrieve order information from Shopify and contact information from HubSpot. POST is used to filter the search data in HubSpot by deal name and to insert new deal and line item data to HubSpot. Note that the new deals in HubSpot will be named uniquely with "Shopify_" followed by Shopify order number. DELETE will archive and effectively delete the partially successful order, if an error occurs during line item insertion.
 
 When inserting new deals and line items to HubSpot, new associations are made. Deals are associated to the HubSpot contact, whose email matches with the email linked to the Shopify order. Line items are associated to the new deal by the deal's object id.
 
