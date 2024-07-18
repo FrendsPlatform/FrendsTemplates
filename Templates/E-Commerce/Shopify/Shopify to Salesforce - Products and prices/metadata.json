@@ -1,0 +1,9 @@
+{
+    "name": "Shopify to Salesforce - Products and prices",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+      "Salesforce",
+      "Shopify"
+    ]
+  }
