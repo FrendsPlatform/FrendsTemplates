@@ -6,7 +6,7 @@ This template retrieves company data from HubSpot and downloads it to a local fi
 
 This template assumes that the following prerequisites are in place:
 
-- HubSpot API key is accessible.
+- HubSpot access token is accessible.
 - The Frends agent has access to the local fileshare to which the resulting JSON file will be saved.
 
 # Implementation and Usage Notes
