@@ -21,6 +21,8 @@ When inserting new deals and line items to HubSpot, new associations are made. D
 
 Other operations are not performed by the template.
 
+The currency of the deals will be set to the default currency in HubSpot. If you want to set a specific currency, you must first add the currency from your HubSpot settings and then include the currency code in deal and line item insertion.
+
 Process variables include base urls and access tokens for both Shopify and HubSpot.
 
 # Error Handling
