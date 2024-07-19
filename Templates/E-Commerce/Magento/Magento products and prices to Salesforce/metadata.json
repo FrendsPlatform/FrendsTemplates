@@ -1,0 +1,8 @@
+{
+    "name": "Adobe Commerce / Magento Product to Salesforce ",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+      "Magento"
+    ]
+  }
