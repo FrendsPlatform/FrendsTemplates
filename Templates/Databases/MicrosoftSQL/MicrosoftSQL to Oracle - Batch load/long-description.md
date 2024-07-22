@@ -1,4 +1,4 @@
-This template process loads data from a table in a **MicrosoftSQL** database into a table in an **Oracle** database in chunks. This template process is meant to be used in conjuction with the "MicrosoftSQL to Oracle - Changes sync" template, which keeps the two tables synchronized after the initial load.
+This template process loads data from a table in a **MicrosoftSQL** database into a table in an **Oracle** database in chunks. This template process is meant to be used in conjunction with the "MicrosoftSQL to Oracle - Changes sync" template, which keeps the two tables synchronized after the initial load.
 
 ![Template](assets/MicrosoftSQL-to-Oracle-Batch-load.svg)
 
@@ -15,7 +15,7 @@ This template assumes that the following prerequisites are in place:
 
 This template process queries data from a table in a **MicrosoftSQL** database, and inserts the rows in user-specified chunks into a table in an **Oracle** database. To do this, the process first fetches the data, and then forms a list of INSERT statements based on the defined chunk size. Afterwards, the INSERT statements are executed one at a time.
 
-Because this template process is intended to be used in conjunction with the "MicrosoftSQL to Oracle - Changes sync" template, each inserted row will contain an UTC timestamp of the time when it was inserted. To the same end, this template process also uses a shared-state task to store a timestamp of when it was run into a cache. The "MicrosoftSQL to Oracle - Changes sync" process can then use this timestamp to determine which rows should be updated.
+Because this template process is intended to be used in conjunction with the "MicrosoftSQL to Oracle - Changes sync" template, each inserted row will contain a UTC timestamp of the time when it was inserted. To the same end, this template process also uses a shared-state task to store a timestamp of when it was run into a cache. The "MicrosoftSQL to Oracle - Changes sync" process can then use this timestamp to determine which rows should be updated.
 
 This template does not update existing rows.
 
