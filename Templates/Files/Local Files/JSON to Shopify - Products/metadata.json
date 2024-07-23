@@ -1,0 +1,8 @@
+{
+    "name": "JSON to Shopify - Products",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+      "Shopify"
+    ]
+  }
