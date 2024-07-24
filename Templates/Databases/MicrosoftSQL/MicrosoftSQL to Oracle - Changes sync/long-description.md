@@ -1,6 +1,6 @@
 This template process fetches new or updated rows from a table in a **MicrosoftSQL** database and inserts or updates the rows into a table in an **Oracle** database in chunks. This template process is meant to be used in conjunction with the "MicrosoftSQL to Oracle - Batch load" template, which can be used initially to load data from the MicrosoftSQL table to the Oracle table.
 
-![Template](assets/MicrosoftSQL-to-Oracle-Changes-sync.svg)
+![Template](assets/MicrosoftSQL-to-Oracle-Changes-synchronization.svg)
 
 # Prerequisites
 
