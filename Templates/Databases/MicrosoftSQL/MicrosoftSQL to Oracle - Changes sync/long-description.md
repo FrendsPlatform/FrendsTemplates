@@ -30,6 +30,50 @@ The process variables include:
 - The name of the column to be used for uniquely identifying each row.
 - The desired chunk size.
 
+**Example source table structure in MicrosoftSQL**
+
+```sql
+CREATE TABLE CONTACTS(
+    id NUMBER NOT NULL PRIMARY KEY,
+    email VARCHAR2(25),
+    firstname VARCHAR2(20),
+    lastname VARCHAR2(20),
+    phone VARCHAR2(15),
+    updated_time DATETIME
+);
+```
+
+**Example staging and destination table structure in Oracle**
+
+```sql
+CREATE TABLE MY_SCHEMA.CONTACTS_STAGING(
+    id NUMBER NOT NULL PRIMARY KEY,
+    email VARCHAR2(25),
+    firstname VARCHAR2(20),
+    lastname VARCHAR2(20),
+    phone VARCHAR2(15),
+    updated_time TIMESTAMP
+);
+
+CREATE TABLE MY_SCHEMA.CONTACTS(
+    id NUMBER NOT NULL PRIMARY KEY,
+    email VARCHAR2(25),
+    firstname VARCHAR2(20),
+    lastname VARCHAR2(20),
+    phone VARCHAR2(15),
+    updated_time TIMESTAMP
+);
+```
+
+In this example case, the process variables would be:
+- MicrosoftSqlTableName: CONTACTS
+- ColumnNames: id, email, firstname, lastname, phone
+- IdentifierColumn: id
+- TimestampColumn: updated_time
+- OracleSchema: MY_SCHEMA
+- OracleStagingTableName: CONTACTS_STAGING
+- OracleTableName: CONTACTS
+
 # Error Handling
 
 There is an error check after each task. If querying the MicrosoftSQL database fails, the process will throw an exception and stop. If inserting a chunk, i.e., executing an insert statement fails, the process will move on to the next chunk and append an error message into a variable that will be printed at the end of the execution. If merging the staging table into the destination table, or cleaning up the staging table fails, the process will throw an exception and stop.
