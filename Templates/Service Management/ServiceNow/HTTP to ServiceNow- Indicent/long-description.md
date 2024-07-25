@@ -13,6 +13,8 @@ This template assumes that the following prerequisites are in place:
 
 This template receives an HTTP POST request, which contains JSON data in its body, and uses the data to create an incident into ServiceNow. On successful completion, the process returns status code 200 and the ID and number of the created incident.
 
+By default, the URL at which this process receives requests is `https://<myfrendsagent>.frendsapp.com<:port>/createServiceNowIncident`. The process has been configured to allow both HTTP and HTTPS protocols and use [API key](https://docs.frends.com/en/articles/2206706-api-keys) authorization. The URL, allowed protocols and authorization method can be changed in the trigger.
+
 Process variables include the credentials for ServiceNow, and the name of the ServiceNow instance.
 
 **Example HTTP request body with supported fields**
