@@ -7,7 +7,7 @@ This template process receives an HTTP POST request containing incident informat
 This template assumes that the following prerequisites are in place:
 
 - The ServiceNow user has the required permissions to create incidents and modify their fields.
- - The default role required for this in ServiceNow is "sn_incident_write".
+  - The default role required for this in ServiceNow is "sn_incident_write".
 
 # Implementation and Usage Notes
 
