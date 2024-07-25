@@ -7,7 +7,7 @@ This template process receives an HTTP POST request containing incident informat
 This template assumes that the following prerequisites are in place:
 
 - The ServiceNow user has the required permissions to create incidents and modify their fields.
-- - The default role required for this in ServiceNow is "sn_incident_write".
+ - The default role required for this in ServiceNow is "sn_incident_write".
 
 # Implementation and Usage Notes
 
@@ -19,7 +19,7 @@ Process variables include the credentials for ServiceNow, and the name of the Se
 
 **Example HTTP request body with supported fields**
 
-´´´JSON
+```JSON
 {
     "impact": 1,
     "urgency": 1,
@@ -31,7 +31,7 @@ Process variables include the credentials for ServiceNow, and the name of the Se
     "notify": 2,
     "comments": "A simple password reset is probably required."
 }
-´´´
+```
 
 **Example responses on success and failure**
 
