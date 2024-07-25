@@ -1,4 +1,4 @@
-This template process receives an HTTP POST request containing incident information, and creates an incident into ServiceNow based on it.
+This template process receives an HTTP POST request containing incident information, and creates a corresponding incident in ServiceNow.
 
 ![Template](assets/HTTP-to-ServiceNow-Create-incident.svg)
 
@@ -6,8 +6,7 @@ This template process receives an HTTP POST request containing incident informat
 
 This template assumes that the following prerequisites are in place:
 
-- The ServiceNow user has the required permissions to create incidents and modify their fields.
-  - The default role required for this in ServiceNow is "sn_incident_write".
+- The ServiceNow user has the required permissions to create incidents and modify their fields. The default role required for this in ServiceNow is "sn_incident_write".
 
 # Implementation and Usage Notes
 
