@@ -6,7 +6,7 @@ This template process receives an HTTP POST request containing service request i
 
 This template assumes that the following prerequisites are in place:
 
-- The ServiceNow user has the required permissions to create sercice requests and modify their fields.
+- The ServiceNow user has the required permissions to create service requests and modify their fields.
   - The default role required for this in ServiceNow is "itil".
 
 # Implementation and Usage Notes
