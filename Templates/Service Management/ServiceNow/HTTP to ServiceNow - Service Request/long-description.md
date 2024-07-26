@@ -1,4 +1,4 @@
-This template process receives an HTTP POST request containing service request information in JSON format, and creates a service request into ServiceNow based on it.
+This template process receives an HTTP POST request containing service request information in JSON format, and creates a corresponding service request in ServiceNow.
 
 ![Template](assets/HTTP-to-ServiceNow-Service-Request.svg)
 
@@ -6,8 +6,7 @@ This template process receives an HTTP POST request containing service request i
 
 This template assumes that the following prerequisites are in place:
 
-- The ServiceNow user has the required permissions to create service requests and modify their fields.
-  - The default role required for this in ServiceNow is "itil".
+- The ServiceNow user has the required permissions to create service requests and modify their fields. The default role required for this in ServiceNow is "itil".
 
 # Implementation and Usage Notes
 
@@ -27,10 +26,10 @@ Process variables include the credentials for ServiceNow, and the name of the Se
     "urgency": 2,
     "priority": 1,
     "delivery_address": "Test Lane 1, 00001 Test",
-    "special_instructions": "Handle with care!",
     "short_description": "Deliver components to IT",
     "description": "The IT department requires some PC components for the servers.",
     "comments": "GPUs and coolers.",
+    "special_instructions": "Handle with care!",
     "items": [
         {
             "id": "123456",
