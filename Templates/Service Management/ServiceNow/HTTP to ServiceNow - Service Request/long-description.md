@@ -12,7 +12,7 @@ This template assumes that the following prerequisites are in place:
 
 This template receives an HTTP POST request, which contains JSON data in its body, and uses the data to create a service request into ServiceNow. On successful completion, the process returns status code 200 and the ID and number of the created service request.
 
-Service requests on ServiceNow can have requested items attached to them. If you want to attach items to the created request, you can include them in the JSON body as an array called `items`. For this, you need to know the Servicenow sys_id of the catalog items you're attaching, and set a price and quantity for them. If you don't want to insert requested items, `items` should be left empty: [].
+Service requests on ServiceNow can have requested items attached to them. If you want to attach items to the created request, you can include them in the JSON body as an array called `items`. For this, you need to know the ServiceNow sys_id of the catalog items you're attaching, and set a price and quantity for them. If you don't want to insert requested items, `items` should be left empty: [].
 
 By default, the URL at which this process receives requests is `https://<myfrendsagent>.frendsapp.com<:port>/createServiceNowServiceRequest`. The process has been configured to allow both HTTP and HTTPS protocols and use [API key](https://docs.frends.com/en/articles/2206706-api-keys) authorization. The URL, allowed protocols and authorization method can be changed in the trigger.
 
