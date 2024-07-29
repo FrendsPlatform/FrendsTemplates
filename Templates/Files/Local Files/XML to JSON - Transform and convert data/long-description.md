@@ -12,7 +12,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-The full paths for both the XML file and the resulting JSON file are specified within the process variables. If a JSON file with the same name already exists, it will be overwritten. This behavior can be adjusted in the write task's settings.
+The full paths for both the XML file and the resulting JSON file are specified within the process variables. If a JSON file with the same name already exists, it will be overwritten. This behavior can be adjusted in the write task settings.
 
 If the read XML needs to be transformed using an XSLT stylesheet, you can provide an XSLT script as a process variable. If this variable is left empty, the process will skip the transformation and will only convert the XML to JSON before saving the file. Note that `method="xml"` should be defined in the `<xsl: output/>` tag so that the transformed XML can be converted into JSON properly.
 
