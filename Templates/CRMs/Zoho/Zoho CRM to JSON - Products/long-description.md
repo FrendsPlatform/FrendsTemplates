@@ -15,11 +15,11 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-The Zoho API implements authentication in a way where a single-use _grant token_ is used to generate an _access token_ for API access, and a _refresh token_ for creating new access tokens, since the access tokens have a lifetime of one hour. The grant token can only be created by hand in the [Zoho API console](https://api-console.zoho.com/). The scope required for this template to work is `ZohoCRM.modules.products.READ`.
+The Zoho API implements authentication in a way where a single-use _grant token_ is used to generate an _access token_ for API access, and a _refresh token_ for creating new access tokens, since the access tokens have a lifetime of one hour. The grant token can only be created by hand in the [Zoho API console](https://api-console.zoho.com/).
 
-This template requires the grant token in order to work correctly the first time it is run. The template will then use the grant token to create the access and refresh tokens for accessing the API, and store them into a cache for further use. During subsequent runs, the template uses the stored access token to access the API, or the stored refresh token to create a new access token if the previous one has expired.
+This template requires the grant token in order to work correctly the first time it is run. The template will then use the grant token to create the access and refresh tokens for accessing the API, and store the refresh token into a cache for further use. During subsequent runs, the template uses the stored refresh token to create a new access token for accessing the API.
 
-By default, this template stores the API access token in the cache for one hour, and the refresh token for 24 hours. If more than 24 hours have passed, the refresh token will no longer be available in the cache, which means the template will again require a grant token in order to be able to create new access/refresh tokens. The lifetimes of the stored tokens can be changed by modifying the shared-state tasks in the template.
+By default, this template stores the refresh token for 24 hours. If more than 24 hours have passed, the refresh token will no longer be available in the cache, which means the template will again require a grant token in order to be able to create a new refresh token. The lifetimes of the stored token can be changed by modifying the shared-state tasks in the template.
 
 When writing the JSON file, if a file with the same name already exists, it will be overwritten. This behavior can be changed in the write tasks.
 
