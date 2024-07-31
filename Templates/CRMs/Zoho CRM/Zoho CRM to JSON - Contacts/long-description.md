@@ -6,7 +6,7 @@ This template retrieves contact data from Zoho CRM and downloads it to a local f
 
 This template assumes that the following prerequisites are in place:
 
-- Zoho CRM authorization token with the approppriate scope has been generated separately and provided in the process variable "ZohoAuthToken".
+- Zoho CRM authorization token with the appropriate scope has been generated separately and provided in the process variable "ZohoAuthToken".
 - The Frends agent has access to the local fileshare to which the resulting JSON file will be saved.
 - The directory for the local JSON file exists.
 
