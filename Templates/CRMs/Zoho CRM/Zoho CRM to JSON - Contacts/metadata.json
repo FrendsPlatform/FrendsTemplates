@@ -1,0 +1,9 @@
+{
+    "name": "Zoho CRM to JSON - Contacts",
+    "version": "1.0.0",
+    "tags": [],
+    "additionalSystemsUsed": [
+      "Zoho CRM"
+    ]
+  }
+  
