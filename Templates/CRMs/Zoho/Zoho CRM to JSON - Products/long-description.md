@@ -21,11 +21,11 @@ This template requires the grant token in order to work correctly the first time
 
 By default, this template stores the refresh token for 24 hours. If more than 24 hours have passed, the refresh token will no longer be available in the cache, which means the template will again require a grant token in order to be able to create a new refresh token. The lifetimes of the stored token can be changed by modifying the shared-state tasks in the template.
 
-If you're using other Zoho CRM templates that implement caching, the templates will share the same cached tokens, since the cache entries have the same names in all Zoho CRM templates. Adjust the scope of the grant token accordingly, to make sure the templates have access to all records needed. Alternatively, you can adjust the names of the cached tokens in the shared-state tasks to differ from each other.
+If you're using other Zoho CRM templates that implement caching, and you want to share the Zoho API keys between these processes, you can give them the same key using the corresponding process variables and ensuring that the "available for all processes in agent group" switch is toggled on in the shared-state tasks, which it is by default.
 
 When writing the JSON file, if a file with the same name already exists, it will be overwritten. This behavior can be changed in the write tasks.
 
-Zoho has different API domains for different geographical areas. For the template to work, requests need to be sent to the correct domain. This is ensured by passing the domain URLs to the template using process variables. The other process variables include the grant token, the client ID and the client secret for Zoho, and the path to the JSON file to be written.
+Zoho has different API domains for different geographical areas. For the template to work, requests need to be sent to the correct domain. This is ensured by passing the domain URLs to the template using process variables. The other process variables include the grant token, the client ID and the client secret for Zoho, the name with which the refresh token should be saved into the cache, and the path to the JSON file to be written.
 
 # Error Handling
 
