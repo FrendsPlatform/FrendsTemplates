@@ -1,4 +1,4 @@
-This template process exchanges a one-time-use grant token for a refresh token that can be used in other Zoho CRM templates.
+This template process exchanges a Zoho API grant token for a refresh token that can be used in other Zoho CRM templates.
 
 ![Template](assets/Zoho-CRM-Exchange-grant-token-for-refresh-token.svg)
 
@@ -10,7 +10,11 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-The purpose of this template is to exchange a one-time-use Zoho API grant token for an exchange token with unlimited uses, that can be used in other Zoho templates for API access, by passing it to them as a process variable.
+The purpose of this template is to exchange a single-use Zoho API grant token for a refresh token with unlimited uses, that can be used in other Zoho templates for API access, by passing it to them as a process variable.
+
+The grant token is a can be created in the Zoho API console, and it is required to generate the actual access and refresh tokens for API access. This template makes it convenient to exchange the grant token into the exchange token that can be used by other processes to generate the access tokens for each process run.
+
+When creating the grant token in the Zoho API console, it should be ensured that the grant token has all scopes required for your use cases. For example, if you are reading contacts in one process and inserting products in another, the grant token should at least have the scopes `ZohoCRM.modules.contacts.READ` and `ZohoCRM.modules.products.ALL`. Another possibility is to use the universal scope `ZohoCRM.modules.ALL`.
 
 The process variables include the client ID and secret for Zoho, the region-specific Zoho accounts domain, and the grant token to be used for the exchange.
 
