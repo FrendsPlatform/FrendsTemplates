@@ -6,11 +6,13 @@ This template retrieves contact data from Zoho CRM and downloads it to a local f
 
 This template assumes that the following prerequisites are in place:
 
-- Zoho CRM refresh token has been generated and provided in the process variables.
+- Zoho CRM refresh token has been generated and provided in the process variables. A refresh token can be generated with the corresponding template.
 - The Frends agent has access to the local fileshare to which the resulting JSON file will be saved.
 - The directory for the local JSON file exists.
 
 # Implementation and Usage Notes
+
+This template requires a refresh token for the Zoho API in order to work. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template.
 
 Zoho CRM API access token is retrieved via HTTP Request. The contacts are retrieved from Zoho CRM API with the API access token. Because the contacts are paginated, a while-loop is used to go through all the pages. By default, the API will provide 200 records per page.
 
