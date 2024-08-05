@@ -15,7 +15,7 @@ This template assumes that the following prerequisites are in place:
 
 Before retrieving the Magento product data, an access token used for authorizing the request is obtained from the Magento API. 
 
-Accessing the Zoho CRM API also requires an access token, which is obtained with a separate refresh token provided in the process variables. To generate this refresh token, you can use the corresponding "Zoho CRM - Exchange grant token for refresh token" template.
+Accessing the Zoho CRM API also requires an access token, which is obtained with a refresh token provided in the process variables. To generate a refresh token, you can use the corresponding "Zoho CRM - Exchange grant token for refresh token" template. The refresh token does not have an expiration time, so it can be used multiple times.
 
 Zoho CRM has separate API domains for different geographical areas, and requests need to be sent to the same domain as the instance. The domain URLs can be set in the process variables.
 
