@@ -1,6 +1,6 @@
-This template fetches customers from Adobe Commerce / Magento and inserts or updates them to Zoho CRM as contacts.
+This template exports customers from Adobe Commerce / Magento and inserts or updates them to Zoho CRM as contacts.
 
-Using this template you can synchronize customers from Adobe Commerce / Magento to Zoho CRM.
+Using this template, you can synchronize customers from Adobe Commerce / Magento to Zoho CRM.
 
 ![Template](assets/Adobe_Commerce___Magento_to_Zoho_CRM_-_Customers.svg)
 
@@ -9,9 +9,11 @@ Using this template you can synchronize customers from Adobe Commerce / Magento 
 This template assumes that the following prerequisites are in place:
 
 - The Magento user should be eligible to obtain an admin authorization token from Magento.
-- The Zoho CRM refresh token should be provided as a process variable.
+- The Zoho CRM refresh token has been generated and provided as a process variable. A refresh token can be generated using a corresponding template.
 
 # Implementation and Usage Notes
+
+This template requires a refresh token for the Zoho API in order to work. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template.
 
 The access tokens to both Magento and Zoho CRM are retrieved first. The required credentials to obtain the tokens should be provided in process variables.
 
