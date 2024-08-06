@@ -9,7 +9,7 @@ This template assumes that the following prerequisites are in place:
 - The Magento user is eligible to obtain an access token from Magento.
 - The Zoho CRM client ID and client secret are accessible.
 - The domain for the Zoho instance (e.g. EU or USA) is identified.
-- A Zoho CRM refresh token with an adequate scope has been generated using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should be configured with the scopes `ZohoCRM.modules.products.READ` and `ZohoCRM.modules.products.CREATE`.
+- A Zoho CRM refresh token with an adequate scope has been generated using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should be configured with the scopes `ZohoCRM.modules.products.READ`, `ZohoCRM.modules.products.CREATE` and `ZohoCRM.modules.products.UPDATE`.
 
 # Implementation and Usage Notes
 
