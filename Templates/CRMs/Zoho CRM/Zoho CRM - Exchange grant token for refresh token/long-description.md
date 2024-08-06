@@ -12,7 +12,7 @@ This template assumes that the following prerequisites are in place:
 
 The purpose of this template is to exchange a single-use Zoho API grant token for a refresh token with unlimited uses, that can be used in other Zoho templates for API access, by passing it to them as a process variable.
 
-The grant token is a can be created in the Zoho API console, and it is required to generate the actual access and refresh tokens for API access. This template makes it convenient to exchange the grant token into the exchange token that can be used by other processes to generate the access tokens for each process run.
+The grant token can be created in the Zoho API console, and it is required to generate the actual access and refresh tokens for API access. The refresh token obtained using this template is used in the other Zoho templates for generating the access token for each process run.
 
 When creating the grant token in the Zoho API console, it should be ensured that the grant token has all scopes required for your use cases. For example, if you are reading contacts in one process and inserting products in another, the grant token should at least have the scopes `ZohoCRM.modules.contacts.READ` and `ZohoCRM.modules.products.ALL`. Another possibility is to use the universal scope `ZohoCRM.modules.ALL`.
 
