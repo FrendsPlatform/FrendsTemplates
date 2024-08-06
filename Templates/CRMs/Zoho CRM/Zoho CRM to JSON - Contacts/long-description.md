@@ -14,7 +14,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template requires a refresh token for the Zoho API in order to work. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should have the the following scope included: **ZohoCRM.modules.contacts.READ**.
+This template requires a refresh token for the Zoho API in order to work. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should have the following scope included: **ZohoCRM.modules.contacts.READ**.
 
 Zoho CRM API access token is retrieved via HTTP Request. The contacts are retrieved from Zoho CRM API with the API access token. Because the contacts are paginated, a while-loop is used to go through all the pages. By default, the API will provide 200 records per page.
 
