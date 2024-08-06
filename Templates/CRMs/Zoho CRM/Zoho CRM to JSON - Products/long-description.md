@@ -15,7 +15,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template requires a refresh token for the Zoho API in order to work. The template will then use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template.
+This template requires a refresh token for the Zoho API in order to work. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template.
 
 When writing the JSON file, if a file with the same name already exists, it will be overwritten. This behavior can be changed in the write tasks.
 
