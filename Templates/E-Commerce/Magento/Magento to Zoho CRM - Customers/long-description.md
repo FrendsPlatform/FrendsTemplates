@@ -10,16 +10,17 @@ This template assumes that the following prerequisites are in place:
 
 - The Magento user should be eligible to obtain an admin authorization token from Magento.
 - The Zoho CRM refresh token has been generated and provided as a process variable. A refresh token can be generated using a corresponding template.
+- Zoho CRM client ID and client secret should be accessible and provided in the process variables to create the access token.
+- Zoho CRM refresh token has been generated and provided in the process variables to create the access token. A refresh token can be generated with the corresponding template.
+- Zoho CRM regional instances for account and API are known, and the domains are adjusted accordingly.
 
 # Implementation and Usage Notes
 
-This template requires a refresh token for the Zoho API in order to work. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template.
+This template requires a refresh token for the Zoho API in order to function. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should have the following scopes included: **ZohoCRM.modules.contacts.READ**, **ZohoCRM.modules.contacts.CREATE**.
 
-The access tokens to both Magento and Zoho CRM are retrieved first. The required credentials to obtain the tokens should be provided in process variables.
+The access token to Magento is created first to retrieve customers from Magento. Then an access token for Zoho CRM is created. The required credentials to obtain both tokens should be provided in process variables.
 
-This template fetches all customers from Magento and either inserts or updates them as contacts in Zoho CRM. To determine if a Magento customer already has a corresponding contact in Zoho CRM, the email addresses of the Magento customers are compared to those of the existing contacts in Zoho CRM.
-
-Customers that have been deleted from Magento are not transferred.
+All customers from Magento, deleted customers excluded, are either inserted or updated in Zoho CRM as contacts. To determine if a Magento customer already has a corresponding contact in Zoho CRM, the email addresses of the Magento customers are compared to those of the existing contacts in Zoho CRM.
 
 Process variables include credentials and URLs for connecting to both Magento and Zoho CRM.
 
