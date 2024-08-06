@@ -9,7 +9,6 @@ Using this template, you can synchronize customers from Adobe Commerce / Magento
 This template assumes that the following prerequisites are in place:
 
 - The Magento user should be eligible to obtain an admin authorization token from Magento.
-- The Zoho CRM refresh token has been generated and provided as a process variable. A refresh token can be generated using a corresponding template.
 - Zoho CRM client ID and client secret should be accessible and provided in the process variables to create the access token.
 - Zoho CRM refresh token has been generated and provided in the process variables to create the access token. A refresh token can be generated with the corresponding template.
 - Zoho CRM regional instances for account and API are known, and the domains are adjusted accordingly.
