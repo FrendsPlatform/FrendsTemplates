@@ -6,6 +6,8 @@ This template process exchanges a Zoho API grant token for a refresh token that 
 
 This template assumes that the following prerequisites are in place:
 
+- The client ID and client secret for Zoho are available.
+- It is known which domain your Zoho instance is in, e.g., EU or America.
 - The grant token has been created in the [Zoho API console](https://api-console.zoho.com/) and has a scope that matches all required use cases.
 
 # Implementation and Usage Notes
