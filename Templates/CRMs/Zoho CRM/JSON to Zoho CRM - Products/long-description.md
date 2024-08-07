@@ -13,7 +13,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template reads product information from a JSON file and inserts or updated the products into Zoho CRM. To determine if a product should be inserted or updated, the product codes of the existing products on Zoho CRM are compared to the codes of the products to be inserted or updated.
+This template reads product information from a JSON file and inserts or updates the products into Zoho CRM. To determine if a product should be inserted or updated, the product codes of the existing products on Zoho CRM are compared to the codes of the products to be inserted or updated.
 
 This template assumes that the input JSON structure is correct and uses the field names that the Zoho API expects. The template does not perform any mapping for the JSON data.
 
