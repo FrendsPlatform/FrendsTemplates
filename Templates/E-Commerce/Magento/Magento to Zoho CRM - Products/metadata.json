@@ -1,0 +1,9 @@
+{
+  "name": "Adobe Commerce / Magento to Zoho CRM - Products",
+  "version": "1.0.0",
+  "tags": [],
+  "additionalSystemsUsed": [
+    "Magento",
+    "ZohoCRM"
+  ]
+}
