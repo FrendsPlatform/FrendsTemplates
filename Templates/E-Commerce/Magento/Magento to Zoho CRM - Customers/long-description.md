@@ -15,7 +15,7 @@ This template assumes that the following prerequisites are in place:
 
 # Implementation and Usage Notes
 
-This template requires a refresh token for the Zoho API in order to function. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should have the following scopes included: **ZohoCRM.modules.contacts.READ**, **ZohoCRM.modules.contacts.CREATE**.
+This template requires a refresh token for the Zoho API in order to function. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should have the following scopes included: **ZohoCRM.modules.contacts.READ**, **ZohoCRM.modules.contacts.CREATE** and **ZohoCRM.modules.contacts.UPDATE**.
 
 The access token to Magento is created first to retrieve customers from Magento. Then an access token for Zoho CRM is created. The required credentials to obtain both tokens should be provided in process variables.
 
