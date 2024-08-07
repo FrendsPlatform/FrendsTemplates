@@ -12,6 +12,7 @@ This template assumes that the following prerequisites are in place:
 - Zoho CRM client ID and client secret should be accessible and provided in the process variables to create the access token.
 - The Zoho CRM refresh token has been generated and provided as a process variable. A refresh token can be generated using a corresponding template.
 - Zoho CRM regional instances for account and API are known, and the domains are adjusted accordingly.
+
 # Implementation and Usage Notes
 
 This template requires a refresh token for the Zoho API in order to function. The template will use the refresh token to create the access token for accessing the API. The refresh token can be created using the "Zoho CRM - Exchange grant token for refresh token" template. For this template, the token should have the following scopes included: **ZohoCRM.modules.contacts.READ**, **ZohoCRM.modules.contacts.CREATE** and **ZohoCRM.modules.contacts.UPDATE**.
