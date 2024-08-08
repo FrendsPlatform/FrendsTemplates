@@ -17,86 +17,47 @@ This template reads product information from a JSON file and inserts or updates 
 
 This template assumes that the input JSON structure is correct and uses the field names that the Zoho API expects. The template does not perform any mapping for the JSON data.
 
-The process variables include the regional domain URLs for your Zoho instance, 
+The process variables include the regional domain URLs for your Zoho instance, the client ID and secret for Zoho, the refresh token for the Zoho API, and the path to the input JSON file in the local fileshare.
 
 **Sample input JSON structure**
 
 ```json
 [
   {
-    "Product_Category": null,
-    "Qty_in_Demand": 0,
-    "Owner": {
-      "name": "example",
-      "id": "123456789",
-      "email": "example@example.com"
-    },
-    "Description": null,
+    "Product_Category": "Example category",
+    "Qty_in_Demand": 10,
+    "Description": "This is an example product.",
     "$currency_symbol": "$",
-    "Vendor_Name": null,
-    "$field_states": null,
-    "$review_process": {
-      "approve": false,
-      "reject": false,
-      "resubmit": false
-    },
-    "Sales_Start_Date": null,
-    "Tax": [],
     "Product_Active": true,
-    "Record_Image": null,
-    "Modified_By": {
-      "name": "example",
-      "id": "123456789",
-      "email": "example@example.com"
-    },
-    "$review": null,
-    "Product_Code": "PROD1",
-    "$state": "save",
-    "$process_flow": false,
-    "Manufacturer": null,
-    "$locked_for_me": false,
-    "id": "987654321",
-    "Support_Expiry_Date": null,
-    "$approved": true,
-    "$approval": {
-      "delegate": false,
-      "approve": false,
-      "reject": false,
-      "resubmit": false
-    },
-    "Modified_Time": "2024-08-02T07:24:06+00:00",
-    "Created_Time": "2024-08-02T06:59:02+00:00",
-    "Commission_Rate": null,
-    "Product_Name": "Product 1",
-    "Handler": null,
-    "$taxable": true,
-    "$editable": true,
-    "Support_Start_Date": null,
-    "$orchestration": false,
-    "Usage_Unit": null,
-    "Qty_Ordered": 0,
-    "$in_merge": false,
-    "Locked__s": false,
-    "Qty_in_Stock": 0,
-    "Created_By": {
-      "name": "example",
-      "id": "123456789",
-      "email": "example@example.com"
-    },
-    "Tag": [],
-    "$approval_state": "approved",
-    "Sales_End_Date": null,
+    "Product_Code": "JSON1",
+    "Manufacturer": "Test Corp",
+    "Product_Name": "Example product 1",
+    "Qty_Ordered": 10,
+    "Qty_in_Stock": 100,
     "Unit_Price": 1500,
-    "Taxable": false,
-    "Reorder_Level": 0
+    "Reorder_Level": 10
   },
-  .
-  .
-  .
+  {
+    "Product_Category": "Example category",
+    "Qty_in_Demand": 13,
+    "Description": "This is an example product.",
+    "$currency_symbol": "$",
+    "Product_Active": true,
+    "Product_Code": "JSON2",
+    "Manufacturer": "Test Corp",
+    "Product_Name": "Example product 2",
+    "Qty_Ordered": 5,
+    "Qty_in_Stock": 88,
+    "Unit_Price": 125,
+    "Reorder_Level": 10
+  },
+.
+.
+.
 ]
 ```
 
-Not all of the fields above are necessarily needed as the structure displayed above is the same as the JSON export structure for products from Zoho, refer to the Zoho API for further information on how to structure the data. 
+In addition to the fields shown in the example JSON, this template supports all other fields that the Zoho API supports, given that the field names are given correctly.
 
 # Error Handling
 
