@@ -9,7 +9,7 @@ This template assumes that the following prerequisites are in place:
 - The Frends agent has access to the local fileshare containing the JSON file.
 - Zoho CRM client ID and client secret should be accessible and provided in the process variables to create the refresh token.
 - Zoho CRM refresh token has been generated and provided in the process variables. A refresh token can be generated with the corresponding template.
-Zoho CRM regional domains for account and API are adjusted accordingly.
+- Zoho CRM domains for account and API are adjusted to your regional instances.
 
 # Implementation and Usage Notes
 
