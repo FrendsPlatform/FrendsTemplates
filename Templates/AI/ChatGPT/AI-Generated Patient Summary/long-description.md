@@ -21,6 +21,52 @@ Next, the complete set of relevant data is sent in a message to ChatGPT to gener
 
 Finally, the generated summary is used to update an existing table with appotiments data. The way the genreated summary is handled may vary depending on specific requirements.
 
+**SQL table structure**
+
+```sql
+CREATE TABLE med_patients (
+    patient_id INT IDENTITY(1,1) PRIMARY KEY,
+    first_name NVARCHAR(50),
+    last_name NVARCHAR(50),
+    date_of_birth DATE,
+    ssn NVARCHAR(20),
+    gender NVARCHAR(10)
+);
+```
+
+```sql
+CREATE TABLE med_history (
+    history_id INT IDENTITY(1,1) PRIMARY KEY,
+    patient_id INT,
+    condition NVARCHAR(255),
+    diagnosis_date DATE,
+    notes NVARCHAR(MAX),
+    FOREIGN KEY (patient_id) REFERENCES med_patients(patient_id) ON DELETE CASCADE
+);
+```
+
+```sql
+CREATE TABLE med_lab_results (
+    lab_id INT IDENTITY(1,1) PRIMARY KEY,
+    patient_id INT,
+    test_name NVARCHAR(255),
+    result_value NVARCHAR(255),
+    test_date DATE,
+    FOREIGN KEY (patient_id) REFERENCES med_patients(patient_id) ON DELETE CASCADE
+);
+```
+
+```sql
+CREATE TABLE med_appointments (
+    appointment_id INT IDENTITY(1,1) PRIMARY KEY,
+    patient_id INT,
+    appointment_date DATETIME,
+    reason NVARCHAR(255),
+    ai_summary NVARCHAR(MAX) NULL,
+    FOREIGN KEY (patient_id) REFERENCES med_patients(patient_id) ON DELETE CASCADE
+);
+```
+
 **Example patient data**
 
 ```
