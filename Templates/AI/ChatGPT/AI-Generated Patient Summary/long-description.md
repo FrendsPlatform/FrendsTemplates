@@ -1,4 +1,4 @@
-This template process retrieves a patient’s history from the database, anonymizes the data, generates an AI summary for the doctor, and saves it in the database.
+This template process retrieves a patientâ€™s history from the database, anonymizes the data, generates an AI summary for the doctor, and saves it in the database.
 
 ![Template](assets/AI-Generated Patient Summary.svg)
 
@@ -15,11 +15,11 @@ This template retrieves patient data from a Microsoft SQL database using a given
 
 Once the data is retrieved, it is anonymized by removing personal information like names and SSNs. This anonymization process can be adjusted depending on the source and structure of the patient data.
 
-After anonymization, an initial message is sent to ChatGPT to check if additional data, such as lab test results, is needed for the patient’s case. While ChatGPT is used in this template, users can replace it with any AI model. If more data is required, it is retrieved from anoter table and included in the next step. This process can be adjusted based on requirements and available additional data sources.
+After anonymization, an initial message is sent to ChatGPT to check if additional data, such as lab test results, is needed for the patientâ€™s case. While ChatGPT is used in this template, users can replace it with any AI model. If more data is required, it is retrieved from another table and included in the next step. This process can be adjusted based on requirements and available additional data sources.
 
 Next, the complete set of relevant data is sent in a message to ChatGPT to generate a patient summary for the doctor. Additionally, the message content can be customized based on the available data and desired output.
 
-Finally, the generated summary is used to update an existing table with appotiments data. The way the genreated summary is handled may vary depending on specific requirements.
+Finally, the generated summary is used to update an existing table with appointments data. The way the generated summary is handled may vary depending on specific requirements.
 
 **SQL table structure**
 
