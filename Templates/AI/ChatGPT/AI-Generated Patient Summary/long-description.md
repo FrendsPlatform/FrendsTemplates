@@ -1,6 +1,6 @@
 This template process retrieves a patient’s history from the database, anonymizes the data, generates an AI summary for the doctor, and saves it in the database.
 
-![Template](assets/AI-Generated Patient Summary.svg)
+![Template](assets/AI-Generated_Patient_Summary.svg)
 
 # Prerequisites
 
