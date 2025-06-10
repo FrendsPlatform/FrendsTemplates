@@ -4,7 +4,7 @@
   "tags": [],
   "additionalSystemsUsed": [
     "Workday",
-    "Microsoft Entra ID",
-    "Microsoft Graph API"
+    "MicrosoftEntraId",
+    "MicrosoftGraphApi"
   ]
 }
